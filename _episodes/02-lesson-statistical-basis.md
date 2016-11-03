@@ -32,6 +32,10 @@ Here some links on distributions and CDFs.
 
 [Definition of distributions](https://en.wikipedia.org/wiki/Probability_distribution)
 
+There is also this link that will tell you about statistical distributions: 
+
+[this link](http://mathworld.wolfram.com/StatisticalDistribution.html)
+
 
 An interesting fact is that p-values, which are random variable because they are 
 just a function of the data, and the data are random (since you got these specific
