@@ -45,19 +45,32 @@ So, say you sample from a normal (0,1) distribution, what is the distribution of
 
 So, let's take Y your random variable. The definition of a [random variable](https://en.wikipedia.org/wiki/Random_variable) is not straightforward, but roughly speaking it is a function that "maps from an outcome of the events (that is, from a point in a probability space) to a mathematically convenient outcome label, usually a real number." 
 
-Let's work with 1- p-value, it is defined as 
+Let's work with Y, a random variable with CDF : F(y) = P(Y <= y). Let's q = 1- p where p is the p-value, of the random variable Y to be less than y  
 
-$ \textbf{p} = P(Y <= y) $
+$$ q = 1-p = P(Y <= y) = F_Y(y)  $$
 
-Let's find the cdf of $ \textbf{p}$ ...
-$ P ( p < t) = P( F(y) < t) ) $
+Let's find the cdf of $$ p $$ ...
+
+inline $$ P ( p <= t) = P( F(y) <= t) ) $$
+
 But F is a monotonic function, so we can say: 
-$  P( F(y) < t) ) = P( F^{-1}F(y) < F^{-1}(t) )  $
-but that is simply
-$  P( y < F^{-1}(t) )  $
-which, by definition, is $F(F^{-1}(t)) = t$.
 
-So, $P( p < t) = F_{p-value}(t) =  t$,
+$$
+ P( F(y) < t) ) = P( F^{-1}F(y) < F^{-1}(t) )  
+$$
+
+but that is simply
+
+$$  
+	P( y < F^{-1}(t) )  
+$$
+
+which, by definition, is $$F(F^{-1}(t)) = t$$.
+
+So, 
+$$ 
+	P( p < t) = F_{p-value}(t) =  t 
+$$
 This is a uniform variable !_
 
 
