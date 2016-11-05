@@ -1,7 +1,7 @@
 ---
 title: "Effect size and variation of effect sizes in brain imaging"
-teaching: 60 
-exercises: 120 
+teaching: 120
+exercises: 180 
 questions: 
 - "Variance explained "
 - "What is an effect size, statistical versus biological or medical relevance"
@@ -33,9 +33,12 @@ Now, how would you define the *estimated* effect size of the difference of the t
 The advantage of using a normalized effect size is that it makes comparisons possible. 
 
 
-Questions: 	
+**Questions:**
+
 	- Is the coefficient of correlation an effect size ? 
 	- Can I always compare normalized effect sizes?
+
+---
 
 ### Variance explained, using the example of the general linear model
 
@@ -49,10 +52,14 @@ The next step is to understand the notion of variance explained. With your new (
 
 Coming back to the effect size, we now can understand the Cohen's f2 effect size in [wikipedia](https://en.wikipedia.org/wiki/Effect_size).
 
-Exercise: 
+**Exercise:** 
+
 	- Is the R2 a "normalized effect size" ?
 	- If you have an experiment with three samples of different populations, and some other covariables . Can you write what would be the R2 for the part of the model that corresponds to the difference of the means of the three groups ?  Can you generalize the wikipedia page on R2 to account for the case of an F test ? See how this is explained in a non-simple linear model in [wikipedia](https://en.wikipedia.org/wiki/Coefficient_of_determination). 
+	- If I am computing an effect size from the general model with neuroimaging data, should it be a standardized one ? why ? 
 
+
+---
 
 ###  Effect size: statistical versus biological or medical relevance
 
@@ -60,28 +67,77 @@ In this section, we want to stress the difference between a significant effect a
 
 See for instance this [paper](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2007.00027.x/full)
 
-Please read it till the end: please go up to the end. This should take you around one hour. Try then to answer the following:
+In particular, read the section "Effect size and confidence interval". 
 
-	- 
+Please read it till paragraph "(2) Covariates, multiple regression, GLM and effect size calculations": this paper sumarize a lot of the information that we need to work efficiently. This should take you around one to two hours. Try then to answer the following
 
+**Questions:**
+
+	- What was the meaning of "effect size" in the Wikipedia page ?
+	- Can you point to some neuroimaging work that make obvious what is the effect size of the results?
+	- The authors refer to three type of effect sizes on page 595 in the section "How to obtain and interpret effect sizes". Can you think of a possibly missing effect size ?  
+	- Why are the authors advocating for non-normalized effect (eg top of p 597, right column). 
+
+---
 
 ###  The variation of effect sizes 
 
+What can influence effect sizes beyond their "true" variation ? While fundamental, effect sizes may vary because of a number of factors, and we need to understand these factors to get a reasonable interpretation.   
+
 ####	    Variation with sampling, or variation because we are using a slightly different population 
 
-####	    variation of effect size with a different model
+First, we have to remember that the effect size is simply a "statistic", i.e. a function of the data. This means that with a different sampling of the data (say, 50 new participants) we will get a new effect size. 
 
-####	    with workflow / pre-processing or over analysis choices parameters
+**Exercise:** 
 
-### Unknown parameters
+	- Go back to the [Nakagawa and Cuthill 2007 work](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2007.00027.x/full, "Effect size, confidence intervals, p-values") and observe figure 2. What do you see in terms of the effect size for the same p value but different sample sizes ? 
 
-## Other measures of effect sizes
+What you observed is a classic effect of the effect size: despite the fact that it should be about the same for different resampling of the population, it changes with the sample size if the p-value is fixed. Why ? because with a smaller sampling, the effect needs to be higher to reach the same significance. The issue that we will come back to in this course is that because only 'significant' results are reported, large effect size can be obtained and reported because of small sampling and significant results. 
 
-### 	can "prediction rate" be used ?
+In short, be aware that effect size may be "sample size" dependent. One interesting paper to read about this is the[Lefebvre, Beggiato, Bourgeron and Toro](http://biorxiv.org/content/early/2014/02/15/002691) study on the corpus callosum size between normal controls and ASD (Autism Syndrom Disorder). This paper shows how small sample size may influence meta analysis, gives actual effect sizes, and show how 
 
-### 	can mutual information be used ?
+#### Variation of effect size with a different model
 
-- What is mutual information ? 
-- Use as effect size ?
+Let's say you are interested in the size of the hippocampus and it's difference between males and females. Say that on average the males heads are larger than the females head, to look at the gender effect we would need to correct for all other effects that may affect the size of the hippocampus. The problem here is that we don't know which factors affect this variable. Using the PING datasets, we looked at this recently, and found that including some phenotypic data made a large difference on the the effect size of gender. 
+
+First, many datasets would not have an extensive phenotyping, and so we may see in the literature results that may be influenced by the fact that covariables were simply not availalbe. Second we actually don't know if there are not any other variable that we should have measured and that may influence this gender effect.
+
+<u> To do: </u>  Read the last part of the [Nakagawa and Cuthill 2007 paper](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2007.00027.x/full, "Effect size, confidence intervals, p-values") from "(2) Covariates, multiple regression, GLM and effect size calculations". 
+
+	- In this paper, we have 
+	> the effect size estimates for a given variable will vary according to what other predictor variables are in the model
+	How will this effect size varies if the other predictor variable introduced is correlated to the predictor we want to compute the effect size of ? and anti correlated ? what if we do not include a correlated (or anti correlated) regressors ?
+	- Can you understand the principle of equation 10? Remember than the t value is constructed by the ratio of  of the non normalized effect size and an estimation of the variance of this effect size. Compare (10) to what you would get with a simple GLM t test equation where the design matrix encode simply groups with two dummy variables that have $$n_1$$ and $$n_2$$ "ones" on the first and second column respectively. 
+
+#### Variation of effect size with workflow / pre-processing or over analysis choices parameters
+
+The variation of the workflow parameters will influence effect size. In fact, it is crucial to see what parameters of the workflow influence the effect size and statistical significance, since this will speak about the robustness of the results. See for instance, 
+
+> Carp, J. (2012). On the Plurality of (Methodological) Worlds: Estimating the Analytic Flexibility of fMRI Experiments. Frontiers in Neuroscience 6.
+
+See also T. Glatard and colleagues:
+
+>  Glatard, T., Lewis, L.B., Ferreira da Silva, R., Adalat, R., Beck, N., Lepage, C., Rioux, P., Rousseau, M.-E., Sherif, T., Deelman, E., et al. (2015). Reproducibility of neuroimaging analyses across operating systems. Frontiers in Neuroinformatics 9.
+
+### Other measures of effect sizes
+
+#### 	Can "prediction rate" be used ?
+
+When the problem can be stated in a "prediction" framework, the prediction rate on test data (data that have not been used to construct the prediction model) is a good "effect size". It is interpretable, prediction is really what we want to have in science, and it will in general be related to the more traditional effect sizes. It does not alleviate the issue of "
+
+### 	Can mutual information be used ?
+
+- What is mutual information ? Why would it be a good measure of the effect size ?
+
+Please read the wikipedia [article](https://en.wikipedia.org/wiki/Mutual_information) on this.  
+
+
+	- Why would mutual information be an acceptable and possibly interesting effect size ?
+	- Would the problem of other unknown predictor be alleviated by this measure ?
+
+Some formula are interesting:
+$$ 
+\frac{\text{Explained  variance  by  the  predictors of interest}}{\text{Residual error variance}}
+$$
 
 
