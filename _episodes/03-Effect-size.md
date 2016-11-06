@@ -28,9 +28,9 @@ Is the overview clear to you? Just to orient you a bit more if it is not, say we
 
 Now, let's say we are studying the activity of the visual cortex in the CG. You want to know if this is different from zero. The *estimated* effect size for the CG is 5%. The **normalized** effect size will be 5/1 = 5 for CG, and 8/2=4 for the PG, while the corresponding t-test will be t=5/(1/sqrt(30-1)) and t=8/(2/sqrt(30-1))
 
-Now, how would you define the *estimated* effect size of the difference of the two population? The "raw" / "not normalized" effect size would simply be 8-5\%. To define the **normalized** is not directly possible because here there is no variability of one population: we have two populations. One possibility is to use the [Welch's](https://en.wikipedia.org/wiki/Welch%27s_t-test) statistics and degrees of freedom, and define the normalized effect size as t times the estimated degrees of freedom. 
+How would you define the *estimated* effect size of the difference of the two population? The "raw" / "not normalized" effect size would simply be 8-5\%. To define the **normalized** we need to estimate the variability of the data, and this can be done using the pooled standard deviation (something close to the average of the two standard deviations weighted by the group sizes). See "Cohen's d" in the "Difference family: Effect sizes based on differences between means" section of  [wikipedia](https://en.wikipedia.org/wiki/Effect_size).  See also the use of the [Welch's](https://en.wikipedia.org/wiki/Welch%27s_t-test) and its estimation of the statistics degrees of freedom, which could provide another way to define the normalized effect size. 
 
-The advantage of using a normalized effect size is that it makes comparisons possible. 
+Using a normalized effect size is that it makes comparisons possible across samples with different standard deviation, but takes us away from the original data. See more on this in some further episodes.
 
 
 **Questions:**
