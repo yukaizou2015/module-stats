@@ -1,6 +1,6 @@
 ---
 layout: break
-title: "Morning Coffee"
+title: "Some math"
 teaching: 0
 exercises: 0
 break: 15
