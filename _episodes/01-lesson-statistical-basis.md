@@ -20,11 +20,50 @@ keypoints:
 
 ---
 
+
 ## Introduction: why do I need to know all this ? 
 
-## Sampling 
 
-Use markdown to write the content.
+## Sampling
+
+-sample vs population
+-generalizability
+-notion of sufficient sample
+
+Please read these: 
+
+[sampling-1](http://www.socialresearchmethods.net/kb/sampstat.php)
+[sampling-2](http://www.socialresearchmethods.net/kb/external.php)
+
+## Multiple Comparison problem:
+
+[Multiple Comparisons](https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Classification_of_multiple_hypothesis_tests)
+
+## p-value and base rate fallacy:
+
+1. This blog concerns number of drugs tested, but could easily generalize to number of voxels or ROIs tested.
+Type I and Type II errors.
+
+[p-values](http://www.statisticsdonewrong.com/p-value.html)
+
+2. XKCD cartoon on multiple testing:
+[xkcd](http://xkcd.com/882/)
+
+
+## Understanding statistical power and significance testing:
+
+- interactive visualization for NHST:
+[NHST](http://rpsychologist.com/d3/NHST/)
+
+- Confidence intervals:
+[Confidence intervals:](http://rpsychologist.com/d3/CI/)
+
+
+
+
+
+
+
 
 ## Distributions 
 
@@ -35,6 +74,10 @@ Here some links on distributions and CDFs.
 There is also this link that will tell you about statistical distributions: 
 
 [this link](http://mathworld.wolfram.com/StatisticalDistribution.html)
+
+
+
+
 
 
 An interesting fact is that p-values, which are random variable because they are 
