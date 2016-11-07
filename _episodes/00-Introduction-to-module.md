@@ -79,7 +79,10 @@ affine = img.affine
 
 And this is our logo :
 
+![an image](https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.svg)
+<!---
 ![an image]({{site.root}}/fig/repronim-logo3.svg)
+--->
 
 
 > ### Exercises and challenges (click on the arrow to the right to open)
