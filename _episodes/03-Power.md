@@ -23,7 +23,14 @@ First, doing some work on this notebook:
 
 ## Some simple simulations  
 
-Exercise: 
+> Exercise: 
+>     visit this [site](http://rpsychologist.com/d3/NHST/) and set your test to
+>     be one tailed at the false positive risk of 0.05. Say a typical effect size in
+>     fMRI corresponds to a Cohen's d of 0.5. What is the sample size that you find ? 
+>     Now, relate to what we are doing in fMRI. What is the problem ? can you use this
+>     online tool to get the number of subjects for your experiment ? if yes, give a
+>     typical example, if not, explain the problem.  
+> 
 
 ## The Predictive Positive Value 
 
