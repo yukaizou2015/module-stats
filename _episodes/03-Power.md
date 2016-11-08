@@ -17,10 +17,24 @@ keypoints:
 
 ## Power : definition and some exercices 
 
+First, doing some work on this notebook:
+
+[Power](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Power-basics.ipynb)
+
 ## Some simple simulations  
+
+Exercise: 
 
 ## The Predictive Positive Value 
 
+Then, on this one: 
+
+[Positive Predictive Value](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Positive-Predictive-Value.ipynb)
+
+
 ## Relation with confidence intervals ? 
 
+Last, you'll need to go through : 
+
+[This notebook](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Misconceptions-Confidence-Intervals.ipynb)
 
