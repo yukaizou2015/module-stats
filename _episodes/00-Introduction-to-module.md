@@ -82,10 +82,6 @@ And this is our logo :
 
 <img src="https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo" >
 
-<!---
-![an image]({{site.root}}/fig/repronim-logo3.svg)
---->
-
 
 > ### Exercises and challenges (click on the arrow to the right to open)
 >
