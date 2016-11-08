@@ -35,7 +35,7 @@ That really depends on your familiarity with statistical concepts and your capac
 
 ### What are the episodes for this module? 
 
-1. [] Statistical basis for reproducible neuroimaging
+1. [X] Statistical basis for reproducible neuroimaging
 2. [X] Effect sizes and effect sizes variation
 3. [] Statistical power in neuroimaging 
 4. [] Statistical reproducibility: Positive predictive values
@@ -62,7 +62,7 @@ That really depends on your familiarity with statistical concepts and your capac
 
 You can learn a lot without coding, but you will have the full benefice if you do code. So, yes, you should code. We have (mostly) adopted python for the language, it may not be your first choice but we think some knowledge of python coding will help you anyways. We will try to help as much as possible by providing tutorials, examples, and links to installation instructions.
 
-### ReproNim is *open*
+### ReproNim is truly *open*
 
 The ReproNim training events can only accommodate a limited number of participants.
 Nevertheless, we are committed to openness and we are committed to providing our
@@ -77,9 +77,11 @@ affine = img.affine
 ~~~
 {: .python}
 
+
 And this is our logo :
 
-![an image](https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.svg)
+<img src="https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo" >
+
 <!---
 ![an image]({{site.root}}/fig/repronim-logo3.svg)
 --->
