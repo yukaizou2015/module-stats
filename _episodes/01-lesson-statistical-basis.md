@@ -35,6 +35,11 @@ Please read these:
 [sampling-1](http://www.socialresearchmethods.net/kb/sampstat.php)
 [sampling-2](http://www.socialresearchmethods.net/kb/external.php)
 
+## P-value
+
+Again, [wikipedia](https://en.wikipedia.org/wiki/P-value) is a great resource. You can also read the short blog from [realClearScience](http://www.realclearscience.com/blog/2016/11/07/httpwwwrealclearsciencecomblog20161107httpwwwrealclearsciencecomblog20161102httpwwwrealclearsciencecomblog201610the_biggest_myth_about_the_p-value.html) to make sure you have the main idea right. 
+
+
 ## Multiple Comparison problem:
 
 [Multiple Comparisons](https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Classification_of_multiple_hypothesis_tests)
