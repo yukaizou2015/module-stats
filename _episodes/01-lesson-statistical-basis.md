@@ -41,13 +41,11 @@ Please read these:
 
 ## p-value and base rate fallacy:
 
-1. This blog concerns number of drugs tested, but could easily generalize to number of voxels or ROIs tested.
-Type I and Type II errors.
+1. This blog concerns number of drugs tested, but could easily generalize to number of voxels or ROIs tested. It introduces to very important concepts, read carefully and make sure you understand what is the base rate fallacy.  After reading, you should know of Type I and Type II errors. 
 
 [p-values](http://www.statisticsdonewrong.com/p-value.html)
 
-2. XKCD cartoon on multiple testing:
-[xkcd](http://xkcd.com/882/)
+The blogs includes the famous XKCD cartoon on [multiple testing](http://xkcd.com/882/)
 
 
 ## Understanding statistical power and significance testing:
@@ -60,14 +58,9 @@ Type I and Type II errors.
 
 
 
-
-
-
-
-
 ## Distributions 
 
-Here some links on distributions and CDFs. 
+Please make sure you understand what is a distribution. some links on distributions and CDFs. 
 
 [Definition of distributions](https://en.wikipedia.org/wiki/Probability_distribution)
 
@@ -76,58 +69,38 @@ There is also this link that will tell you about statistical distributions:
 [this link](http://mathworld.wolfram.com/StatisticalDistribution.html)
 
 
+We need to be able to use the [Cumulative Density function](https://en.wikipedia.org/wiki/Cumulative_distribution_function) : CDF and its Complementary cumulative distribution function (also called tail distribution, or survival function :  $$ SF(x) =  1 - CDF(x) $$. 
 
+The cumulative density function of a random variable X is often noted $F_X$ or simply $F$ when there is no ambiguity. 
 
+An interesting fact is that p-values, which are random variable because they are just a function of the data, and the data are random (since you got these specific data by sampling eg subjects, right ?).
 
+So, say you sample from a normal N(0,1) distribution, what is the distribution of a p-value for a test T (for instance the test T is simply a z-score for a sample of N(0,1) variables. 
 
-An interesting fact is that p-values, which are random variable because they are 
-just a function of the data, and the data are random (since you got these specific
-data by sampling some subjects, right ?)
+Let's take T as your random variable. Note, the definition of a [random variable](https://en.wikipedia.org/wiki/Random_variable) is not straightforward, but roughly speaking it is a function that "maps from an outcome of the events (that is, from a point in a probability space) to a mathematically convenient outcome label, usually a real number." 
 
-So, say you sample from a normal (0,1) distribution, what is the distribution of a p-value ?
+Let's $$ P = F(T) $$ Where $$ F $$ is the CDF of $$ T $$ i.e. $$ F(t) \equiv F_T(t) \equiv Pr(T <= t) $$. 
 
-So, let's take Y your random variable. The definition of a [random variable](https://en.wikipedia.org/wiki/Random_variable) is not straightforward, but roughly speaking it is a function that "maps from an outcome of the events (that is, from a point in a probability space) to a mathematically convenient outcome label, usually a real number." 
+$$ Pr(P < p) = Pr(F(T) < p) $$
 
-Let's work with Y, a random variable with CDF : F(y) = P(Y <= y). Let's q = 1- p where p is the p-value, of the random variable Y to be less than y  
+If F is invertible, and for continuous random variable with strictly monotonic cumulative density function this is the case, we have 
 
-$$ q = 1-p = P(Y <= y) = F_Y(y)  $$
+$$ F(T) <= p \equiv F{-1}F(T) <= F^{-1}(p) $$
 
-Let's find the cdf of $$ p $$ ...
+hence, 
 
-inline $$ P ( p <= t) = P( F(y) <= t) ) $$
-
-But F is a monotonic function, so we can say: 
-
-$$
- P( F(y) < t) ) = P( F^{-1}F(y) < F^{-1}(t) )  
-$$
-
-but that is simply
-
-$$  
-	P( y < F^{-1}(t) )  
-$$
-
-which, by definition, is $$F(F^{-1}(t)) = t$$.
+$$ Pr(P < p) = Pr(T < F^{-1}(p)) \equiv F(F^{-1}(p)) = p $$
 
 So, 
-$$ 
-	P( p < t) = F_{p-value}(t) =  t 
-$$
-This is a uniform variable !_
 
+$$ Pr( P <= p) = F_p(p) = p $$
 
-## Hypothesis testing: the basics: H0 versus H1
+Therefore, the CDF of $$P$$ is the identity function $$ CDF(x)=x $$. The probability function is simply the derivative of the CDF (when this derivative exists) here $$ PDF(x) = f(x) = 1 $$.  This is a uniform variable !_
 
- 
-## confidence intervals
-
-Confidence intervals are confusing. 
 
 ## Notion of model comparison : BIC/Akaike
 
 Model comparison is **fundamental**. 
-
 
 ## Notion of bayesian statistics  
 
@@ -140,6 +113,4 @@ The problems are :
 	- the training is not provided
 
  
-
-
 
