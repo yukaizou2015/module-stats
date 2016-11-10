@@ -84,13 +84,13 @@ So, say you sample from a normal N(0,1) distribution, what is the distribution o
 
 Let's take T as your random variable. Note, the definition of a [random variable](https://en.wikipedia.org/wiki/Random_variable) is not straightforward, but roughly speaking it is a function that "maps from an outcome of the events (that is, from a point in a probability space) to a mathematically convenient outcome label, usually a real number." 
 
-Let's $$ P = F(T) $$ Where $$ F $$ is the CDF of $$ T $$ i.e. $$ F(t) \equiv F_T(t) \equiv Pr(T <= t) $$. 
+Let's $$ P = F(T) $$ Where $$ F $$ is the CDF of $$ T $$ i.e. $$ F(t) \equiv F_T(t) \equiv Pr(T \leq t) $$. 
 
 $$ Pr(P < p) = Pr(F(T) < p) $$
 
 If F is invertible, and for continuous random variable with strictly monotonic cumulative density function this is the case, we have 
 
-$$ F(T) <= p \equiv F{-1}F(T) <= F^{-1}(p) $$
+$$ F(T) \leq p \equiv F{-1}F(T) \leq F^{-1}(p) $$
 
 hence, 
 
