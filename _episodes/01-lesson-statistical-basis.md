@@ -90,7 +90,7 @@ $$ Pr(P < p) = Pr(F(T) < p) $$
 
 If F is invertible, and for continuous random variable with strictly monotonic cumulative density function this is the case, we have 
 
-$$ F(T) \leq p \equiv F{-1}F(T) \leq F^{-1}(p) $$
+$$ F(T) \leq p \equiv F^{-1}F(T) \leq F^{-1}(p) $$
 
 hence, 
 
