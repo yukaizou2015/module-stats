@@ -26,6 +26,8 @@ keypoints:
 
 ## Sampling
 
+In this unit, we would like you to fully understand the concept of sampling. 
+
 -sample vs population
 -generalizability
 -notion of sufficient sample
