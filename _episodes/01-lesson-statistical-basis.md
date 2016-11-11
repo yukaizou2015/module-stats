@@ -37,8 +37,11 @@ Please read the sections on this webpage:
 [Basics of sampling](http://www.socialresearchmethods.net/kb/sampling.php)
 
 The key concepts are:
+
 1. A sample is a subset of a population
+
 2. The quality of the sample is related to the generalizability of the conclusions to the larger population of interest.
+
 3. Most statistics are based on the assumption that, in the long run, statistics based on repeated samples from a population are distributed about the true (unobserved) population parameter.
 
 
@@ -50,11 +53,17 @@ The key concepts are:
 Again, [wikipedia](https://en.wikipedia.org/wiki/P-value) is a great resource. You can also read the short blog from [realClearScience](http://www.realclearscience.com/blog/2016/11/07/httpwwwrealclearsciencecomblog20161107httpwwwrealclearsciencecomblog20161102httpwwwrealclearsciencecomblog201610the_biggest_myth_about_the_p-value.html) to make sure you have the main idea right. 
 
 The key concepts are:
+
 1. P-values can indicate how incompatible the data are with a specified statistical model.
+
 2. P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
+
 3. Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.
+
 4. Proper inference requires full reporting and transparency. P-values and related analyses should not be reported selectively.
+
 5. A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.
+
 6. By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.
 
 
