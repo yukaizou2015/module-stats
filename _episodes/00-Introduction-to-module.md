@@ -35,14 +35,14 @@ That really depends on your familiarity with statistical concepts and your capac
 
 ### What are the episodes for this module? 
 
-1. [X] Statistical basis for reproducible neuroimaging
-2. [X] Effect sizes and effect sizes variation
-3. [X] Statistical power in neuroimaging and Statistical reproducibility: Positive predictive values
-4. [] Machine learning and prediction
-5. [] P-hacking "How *not* To"
-6. [] Statistical methods in available software
-7. [] Meta analyses in neuroimaging
-8. [] Culture and ethical aspects: last but certainly not least. 
+1. Statistical basis for reproducible neuroimaging
+2. Effect sizes and effect sizes variation
+3. Statistical power in neuroimaging and Statistical reproducibility: Positive predictive values
+4. P-hacking "How *not* To"
+5. Meta analyses in neuroimaging
+6. Statistical methods in available software
+7. Machine learning and prediction
+8. Culture and ethical aspects: last but certainly not least. 
 
 [//]: # Will I be done in 3 days ? No.
 <!---
