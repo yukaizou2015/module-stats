@@ -26,7 +26,8 @@ keypoints:
 
 ## Sampling
 
-In this unit, we would like you to fully understand the concept of sampling. 
+In this unit, we would like you to fully understand the concept of sampling. It is essential that
+you master that concept, as it is at heart of most scientific studies. 
 
 -sample vs population
 -generalizability
