@@ -81,7 +81,7 @@ And this is our logo :
 
 No logo !
 
-<p><img src="https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo should be seen in html" /></p>
+<p><img src="https://raw.githubusercontent.com/ReproNim/artwork/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo should be seen in html" /></p>
 
 <!---
 <img src="https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo" >
