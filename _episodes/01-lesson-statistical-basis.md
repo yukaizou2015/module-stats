@@ -26,21 +26,45 @@ keypoints:
 
 ## Sampling
 
-In this unit, we would like you to fully understand the concept of sampling. It is essential that
-you master that concept, as it is at heart of most scientific studies. 
+In this unit, we would like you to fully understand the concept of a sample as a subset of a population.
 
+you master that concept, as it is at heart of most scientific studies. 
 -sample vs population
 -generalizability
 -notion of sufficient sample
 
-Please read these: 
+Please read the sections on this webpage: 
+[Basics of sampling](http://www.socialresearchmethods.net/kb/sampling.php)
 
-[sampling-1](http://www.socialresearchmethods.net/kb/sampstat.php)
-[sampling-2](http://www.socialresearchmethods.net/kb/external.php)
+The key concepts are:
+
+1. A sample is a subset of a population
+
+2. The quality of the sample is related to the generalizability of the conclusions to the larger population of interest.
+
+3. Most statistics are based on the assumption that, in the long run, statistics based on repeated samples from a population are distributed about the true (unobserved) population parameter.
+
 
 ## P-value
 
+"Informally, a p-value is the probability under a specified statistical model that a statistical summary of the data (e.g., the sample mean difference between two compared groups) would be equal to or more extreme than its observed value."
+[ASA Statement on Statistical Significance and P-Values](http://amstat.tandfonline.com/doi/full/10.1080/00031305.2016.1154108)
+
 Again, [wikipedia](https://en.wikipedia.org/wiki/P-value) is a great resource. You can also read the short blog from [realClearScience](http://www.realclearscience.com/blog/2016/11/07/httpwwwrealclearsciencecomblog20161107httpwwwrealclearsciencecomblog20161102httpwwwrealclearsciencecomblog201610the_biggest_myth_about_the_p-value.html) to make sure you have the main idea right. 
+
+The key concepts are:
+
+1. P-values can indicate how incompatible the data are with a specified statistical model.
+
+2. P-values do not measure the probability that the studied hypothesis is true, or the probability that the data were produced by random chance alone.
+
+3. Scientific conclusions and business or policy decisions should not be based only on whether a p-value passes a specific threshold.
+
+4. Proper inference requires full reporting and transparency. P-values and related analyses should not be reported selectively.
+
+5. A p-value, or statistical significance, does not measure the size of an effect or the importance of a result.
+
+6. By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.
 
 
 ## Multiple Comparison problem:
