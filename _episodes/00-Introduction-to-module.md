@@ -1,16 +1,18 @@
 ---
 title: "An introduction to the Statistics in reproducibility module"
-teaching: A fair bit of time.   
-exercises: As many as possible. 
+
+teaching: "While the time you will need will very much depend on your prior background, we think it should take on average about 20 hours (so, for instance 5 weeks working 4 hours per week).   "
+
+exercises: "There are a few questions and exercises in this module. We strongly recommend you try to assess your working knowledge of the module with these. Please contact us (email: ) or feedback to us through our github repository (github.com/repronim/module-stat) with any feedback you think would be useful.  "
+
 questions:
 - "Who is this modulde for ?"
 - "How can I get some help if I get stuck on solving for an exercise or a question ?"
 - "How can I validate this module ?"
 - "When and where are the future ReproNim training workshops ?"
 
-
 objectives:
-- "Teach (non statistician / applied math) neuroimagers about the statistical aspects of reproducibility "
+- "Teach (non statistician / applied math) neuroimagers about the statistical aspects of reproducibility"
 - "Make this a collaborative enterprise: you can improve this module if you know how to do a pull request, which is taught to you in module 'the informatics basics of reproducibility (module 0)"
 - "This module should give you a critical eye on most of the current literature and the knowledge to do solid work"
 
@@ -38,10 +40,10 @@ That really depends on your familiarity with statistical concepts and your capac
 1. Statistical basis for reproducible neuroimaging
 2. Effect sizes and effect sizes variation
 3. Statistical power in neuroimaging and Statistical reproducibility: Positive predictive values
-4. P-hacking "How *not* To"
+4. P-hacking, file drawer effect 
 5. Meta analyses in neuroimaging
-6. Statistical methods in available software
-7. Machine learning and prediction
+6. [Statistical methods in available software]
+7. [Machine learning and prediction]
 8. Culture and ethical aspects: last but certainly not least. 
 
 [//]: # Will I be done in 3 days ? No.
@@ -77,12 +79,9 @@ affine = img.affine
 {: .python}
 
 
-And this is our logo :
-
-No logo !
+### And this is our logo:
 
 <p><img src="https://raw.githubusercontent.com/ReproNim/artwork/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo should be seen in html" /></p>
-
 <!---
 <img src="https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo" >
 
