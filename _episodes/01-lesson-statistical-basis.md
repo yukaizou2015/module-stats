@@ -75,7 +75,37 @@ The key concepts and *limitations* are:
 
 6. By itself, a p-value does not provide a good measure of evidence regarding a model or hypothesis.
 
-### Exercise on p-values : [TBD]
+Other resource: 
+
+This [paper](https://doi.org/10.1053/j.seminhematol.2008.04.003) by Steven Goodman (unfortunately seems to be under pay wall, please email us if you don't have access) tells you about the mis-conceptions of p-values. 
+
+### Exercise on p-values
+
+For this exercise, you need to be able to generate some values from a normal
+distribution and perform a test on the mean of these values. You can use
+python, R, or octave/matlab for this. An example in python with the solution
+to the exercise is given here [TBD]. 
+
+* Generate some N sample normal data from a gaussian distribution (mean=0,
+  sigma=1, N=30)  - Let's think of this as our sampling noise. We are
+  interested in the mean of our samples. 
+
+* Test if the mean is significantly greater than zero with a type I error rate
+  of 5\%. If it is, what was the chance of this happening?  if it is not
+  "significant", repeat the sampling and test again until you find something
+  significant. How many times did you need to sample again ? what would you have
+  expected ?
+
+* Now, say we have some signal. Simulate the case where the mean of our
+  sampling distribution is 1.64/$$\sqrt(30) $$ and the sigma is one in one
+  case, and the mean is .164/$$\sqrt(30) $$ and the sigma is .1 in another case.
+  How many times is the test significant in both cases if you do 100 simulations
+  ? what would you expect ?
+
+* You should find that roughly, the number of times these two tests are
+  "significant" is about the same, because the signal to noise ratio is the
+  same. But there is a fundamental difference: if the mean was representing a
+  biological value, what is the fundamental difference ? 
 
 ### Multiple Comparison problem:
 
