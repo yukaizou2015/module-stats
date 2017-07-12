@@ -14,9 +14,13 @@ objectives:
 understanding this course. You will know what is sampling, the 
 fundamentals of statistical testing, etc.  "
 keypoints:
-- Some keypoints
+- Be familiar with the concept of sampling
+- Know what we call a distribution, a p-value, a confidence interval,  
+- Have some knowledge of Bayesian statistics and model comparison
 
+<!--
 - This is in line with our overall goal of making science (including scientific training) more open.
+-->
 
 ---
 
@@ -187,19 +191,29 @@ Therefore, the CDF of $$P$$ is the identity function $$ CDF(x)=x $$. As the prob
 
 This fact is used latter in this course on for instance to demonstrate the presence in p-hacking in the litterature. See lesson on what is p-hacking.
 
-## Bayesian statistics / 
+## Bayesian statistics 
 
 Finding the right level of introduction for this topic is not easy. We propose to start with [this blog](https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/) which should give you a good introduction. 
+
+There is also [this one](http://faculty.washington.edu/kenrice/BayesIntroClassEpi515.pdf). Exercices on this still need to be developed [TBD]. 
+
 
 Bayesian statistics are *rarely* used, because researchers are often unsure on how to use them, and because they sometimes can be used to include subjective knowledge. However, they have a better theoretical ground and in many cases they should be used. 
 
 The inertia of the community to adopt the bayesian framework is clear.  One reason for this inertia is that researchers and reviewers would need some training, and the training -at the level required- is often missing. Another issue is that the computational tools are also sometimes missing.  
 
 ### Questions on Bayesian statistics and comparison with frequentist:
-[TBD]
 
+* Why are Bayesian statistics not very used in medical or life science journals ? 
+* What are the key advantage of Bayesian statistics ? 
+* What do Bayesian statistics require before you can apply them - do we have this 
  
 ## Notion of model comparison : BIC/Akaike
 
-Model comparison is **fundamental**. Something on that topic is [TBD]. 
+Model comparison is **fundamental**. Here are a few links on this topic:
+* [Wikipedia AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion)
+* [Wikipedia BIC](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
+* And a comparison of these two [here](https://methodology.psu.edu/AIC-vs-BIC)
+
+Something on that topic is . 
 
