@@ -1,8 +1,8 @@
 ---
 title: "Statistical basis for neuroimaging analyses: the basics"
-teaching: 60 
-exercises: 120 
-questions: 
+teaching: "~ 4x60" 
+exercises: "~ 2x60" 
+questions:
 - "Sampling, notion of estimation : estimates of mean and variances"
 - "Distributions, relation to frequency, PDF, CDF, SF, ISF "
 - "Hypothesis testing: the basics H0 versus H1"
@@ -10,17 +10,12 @@ questions:
 - "Notion of model comparison : BIC/Akaike"
 - "Notion of bayesian statistics " 
 objectives:
-- "After this lesson, you should have the statistical basis for 
-understanding this course. You will know what is sampling, the 
-fundamentals of statistical testing, etc.  "
+- "After this lesson, you should have the statistical basis for understanding this course. You will know what is sampling, the fundamentals of statistical testing, etc.  "
 keypoints:
-- Be familiar with the concept of sampling
-- Know what we call a distribution, a p-value, a confidence interval,  
+- "Be familiar with the concept of sampling"
+- Know what we call a distribution, a p-value, a confidence interval
 - Have some knowledge of Bayesian statistics and model comparison
-
-<!--
 - This is in line with our overall goal of making science (including scientific training) more open.
--->
 
 ---
 
@@ -211,9 +206,12 @@ The inertia of the community to adopt the bayesian framework is clear.  One reas
 ## Notion of model comparison : BIC/Akaike
 
 Model comparison is **fundamental**. Here are a few links on this topic:
+
 * [Wikipedia AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion)
+
 * [Wikipedia BIC](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
+
 * And a comparison of these two [here](https://methodology.psu.edu/AIC-vs-BIC)
 
-Something on that topic is . 
+
 

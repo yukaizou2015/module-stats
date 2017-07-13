@@ -1,24 +1,18 @@
 ---
 title: "An introduction to the Statistics in reproducibility module"
-
-teaching: "While the time you will need will very much depend on your prior background, we think it should take on average about 20 hours (so, for instance 5 weeks working 4 hours per week).   "
-
-exercises: "There are a few questions and exercises in this module. We strongly recommend you try to assess your working knowledge of the module with these. Please contact us (email: ) or feedback to us through our github repository (github.com/repronim/module-stat) with any feedback you think would be useful.  "
-
+teaching: "The time you will need will depend on your background, on average about 20 hours (eg 5 weeks 4 hours per week).  "
+exercises: "Try to assess your working knowledge of the module with the exercises." 
 questions:
 - "Who is this modulde for ?"
 - "How can I get some help if I get stuck on solving for an exercise or a question ?"
 - "How can I validate this module ?"
-- "When and where are the future ReproNim training workshops ?"
-
 objectives:
-- "Teach (non statistician / applied math) neuroimagers about the statistical aspects of reproducibility"
-- "Make this a collaborative enterprise: you can improve this module if you know how to do a pull request, which is taught to you in module 'the informatics basics of reproducibility (module 0)"
+- "Teach neuroimagers about the statistical aspects of reproducibility"
+- "Have a collaborative training enterprise: you can improve this module if you know how to do a pull request or raise an issue on github:github.com/repronim/module-stat. See module 'the informatics basics of reproducibility (module 0) on how to do this."
 - "This module should give you a critical eye on most of the current literature and the knowledge to do solid work"
-
-
 keypoints:
-- This is in line with our overall goal of making science (including scientific training) more open.
+- Reproducible analysis is impacted by statistical analyses.
+- Reproducible research requires understanding the notions of sampling, testing, power, model selection. 
 
 ---
 
@@ -63,13 +57,7 @@ That really depends on your familiarity with statistical concepts and your capac
 
 You can learn a lot without coding, but you will have the full benefice if you do code. So, yes, you should code. We have (mostly) adopted python for the language, it may not be your first choice but we think some knowledge of python coding will help you anyways. We will try to help as much as possible by providing tutorials, examples, and links to installation instructions.
 
-### ReproNim is truly *open*
-
-The ReproNim training events can only accommodate a limited number of participants.
-Nevertheless, we are committed to openness and we are committed to providing our
-materials in an open format, with liberal licenses, and through a publicly accessible website.
-There are time to time an article we want you to read and is behind paywall. If your institution or university does not give you access to it, let us know and we can provide a private copy for your personal use.
-
+Here is an example of code: 
 
 ~~~
 import nibabel as nib
@@ -77,6 +65,15 @@ img = nib.load('my_file.nii.gz')
 affine = img.affine
 ~~~
 {: .python}
+
+
+### ReproNim is truly *open*
+
+The ReproNim training events can only accommodate a limited number of participants.
+Nevertheless, we are committed to openness and we are committed to providing our
+materials in an open format, with liberal licenses, and through a publicly accessible website.
+There are time to time an article we want you to read and is behind paywall. If your institution or university does not give you access to it, let us know and we can provide a private copy for your personal use.
+
 
 
 ### And this is our logo:
@@ -103,3 +100,8 @@ affine = img.affine
 > ### Callouts
 > We sometimes will have box with a "callout", for extra material that is "optional".
 {: .callout}
+
+
+<!--- COMMENTED 
+
+--->
