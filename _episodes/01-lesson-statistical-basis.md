@@ -49,9 +49,19 @@ The key concepts are:
 ## Statistics and random variables
 
 You may hear a statistician talk about "a statistic". For instance, $$t$$ or $$F$$ values are statistics distributed according to a Student or a Snedecor distribution. But what is a "statistic" ? 
-In simple words, a statistic is any function of the data. The data are generally randomly sampled, and their distribution is often modelled with known distribution. Let's immagine that you have measured something interesting on $$N$$ subject, say that the measures are the $$Y_1,Y_2, ..., Y_N$$, and you are interested in the mean of the $$Y$$. The mean is a function of the data. It is a statistics. So would be the product of the $$Y$$s, etc. Since the $$Y$$s are random in the sense that they are randomly sampled from a population, and that another sampling would yield different values, the statistic is a random variable as well. For some interesting statistics, such as the average divided by the standard deviation, the distribution of the statistic is known if we assume the distribution of the original data to be known (often, a normal distribution is assumed).
+In simple words, a statistic is any function of the data. The data are generally randomly sampled, and their distribution is often modelled with known distribution. Let's imagine that you have measured something interesting on $$N$$ subject, say that the measures are the $$Y_1,Y_2, ..., Y_N$$, and you are interested in the mean of the $$Y$$. The mean is a function of the data. It is a statistics. So would be the product of the $$Y$$s, etc. Since the $$Y$$s are random in the sense that they are randomly sampled from a population, and that another sampling would yield different values, the statistic is a random variable as well. For some interesting statistics, such as the average divided by the standard deviation, the distribution of the statistic is known if we assume the distribution of the original data to be known (often, a normal distribution is assumed).
 
 ## P-value
+
+> ## Can answer these questions? Even if yes, you may want to read the p-value section --->
+>
+>  - A p-value is telling me that my alternative hypothesis is likely (H1 is probably true)
+>  - A p-value is telling me that my null hypothesis is unlikely (H0 is probably false)
+>  - A p-value is telling me that my null hypothesis is less likely than my alternative hypothesis
+>  - A p-value tells me that my data are improbable under the null hypothesis 
+>  - The effect size is more important to know than the p-value in the sense that it has more biological interpretation
+>  - A p-value is more important for science because one cannot publish without a p-value, but one can publish without reporting an effect size 
+{: .challenge}
 
 If the distribution of a statistic is assumed (by assuming the distribution of the original data) it can be used to compute a p-value. For instance, if you assume that the distribution of the sum of the $$Y$$s is normal and has zero mean, and if we estimate the dispersion (the variance), we have a distribution under the hypothesis that the sum of the values has zero mean. We can then compare the *observed* statistic with its distribution under this (null) hypothesis. 
 
@@ -85,14 +95,14 @@ distribution and perform a test on the mean of these values. You can use
 python, R, or octave/matlab for this. An example in python with the solution
 to the exercise is given here [TBD]. 
 
-* Generate some N sample normal data from a gaussian distribution (mean=0,
+* Generate some N sample normal data from a Gaussian distribution (mean=0,
   sigma=1, N=30)  - Let's think of this as our sampling noise. We are
   interested in the mean of our samples. 
 
 * Test if the mean is significantly greater than zero with a type I error rate
-  of 5\%. If it is, what was the chance of this happening?  if it is not
+  of 5\%. If it is, what was the chance of this happening?  If it is not
   "significant", repeat the sampling and test again until you find something
-  significant. How many times did you need to sample again ? what would you have
+  significant. How many times did you need to sample again ? What would you have
   expected ?
 
 * Now, say we have some signal. Simulate the case where the mean of our
@@ -106,19 +116,34 @@ to the exercise is given here [TBD].
   same. But there is a fundamental difference: if the mean was representing a
   biological value, what is the fundamental difference ? 
 
+
+
 ### Multiple Comparison problem:
 
-One of the best way to understand the problem is to look at the [xkcd view of it](https://xkcd.com/882/). The cartoon is great not only because it exposes the issue, but because it exposes the *consequence* of the issue in peer review publications. 
+One of the best way to understand the problem is to look at the [xkcd view of it](https://xkcd.com/882/). The cartoon is great not only because it exposes the issue, but because it also exposes the *consequence* of the issue in peer review publications. 
 
 
 [Multiple Comparisons](https://en.wikipedia.org/wiki/Multiple_comparisons_problem#Classification_of_multiple_hypothesis_tests)
 
-## p-value and base rate fallacy:
+
+### Exercise on multiple comparison issue :
+
+> ## Can answer these questions? --->
+>
+>  - You look at the correlation between the size of the nose of individuals
+>    and the size of their car. You have data from 100 cities. Is it likely
+>    that you will find a correlation significant in at least one city?
+>  - If I do 10 statistical significance tests, to have a false positive rate
+>    of 5\%, I should use 5/10\% for each individual test
+>  - If the 10 statistics tested (eg, 10 t-statistics) are positively
+>    correlated, is this correction too harsh ? 
+{: .challenge}
+
+## p-value and *base rate fallacy*:
 
 This [blog on p-values](http://www.statisticsdonewrong.com/p-value.html)
    concerns number of drugs tested, but could easily generalize to number of voxels or ROIs tested. It introduces to very important concepts, read carefully and make sure you understand what is the base rate fallacy.  After reading, you should know of Type I and Type II errors. 
 
-### Exercise on multiple comparison issue : [TBD]
 
 ## Understanding statistical power and significance testing:
 
@@ -157,40 +182,42 @@ You should have now a good idea of what is a distribution, and what is the cumul
 
 An interesting fact is that p-values, which are random variable because they are just a function of the data, and the data are random (since you got these specific data by sampling eg subjects).
 
-So, say you sample from a normal N(0,1) distribution, what is the distribution of a p-value for a test T (for instance the test T is simply a z-score for a sample of N(0,1) variables).
+So, say you sample from a normal N(0,1) distribution, what is the distribution of a p-value for a test T (for instance the test T is simply a z-score for a sample of N(0,1) variables). We show that this distribution is uniform, where all values are equally probable (loosely speaking). 
 
-Let's take T as your random variable. Note, the definition of a [random variable](https://en.wikipedia.org/wiki/Random_variable) is not straightforward, but roughly speaking it is a function that "maps from an outcome of the events (that is, from a point in a probability space) to a mathematically convenient outcome label, usually a real number." 
-
-We write *"equal by definition"* with the symbol $$\equiv$$. We note the random variables with capital letters and specific values taken by lower case letters. $$F_T$$ is the cumulative density function (CDF) of $$T$$, and $$F_P$$ is the CDF of $$P$$. 
-
-We define our variable $$P$$ with:
-$$ P \equiv F_T(T) $$ <!--- Where $$ F $$ is the CDF of $$ T $$ --->
-
-This means that $$ F_T(t) \equiv Pr(T \leq t) $$. We have by definition of $$P$$: 
-
-$$ Pr(P \leq p) = Pr(F_T(T) \leq p) $$
-
-If F is invertible, and for continuous random variable with strictly monotonic CDF (CDF that are never "flat") it is the case,  $$F_T$$ has an inverse $$F_T^{-1}$$, and we can apply this function on both side of the inequality without changing the inequality: 
-
-$$ F_T(T) \leq p \equiv F_T^{-1}F_T(T) \leq F_T^{-1}(p) $$
-
-hence, 
-
-$$ Pr(P \leq p) = Pr(T \leq F^{-1}(p)) \equiv F_T(F_T^{-1}(p)) = p $$
-
-So, 
-
-$$ Pr( P \leq p) \equiv F_p(p) = p $$
-
-Therefore, the CDF of $$P$$ is the identity function $$ CDF(x)=x $$. As the probability distribution function (PDF) is simply the derivative of the CDF (when this derivative exists) we finally have that $$ PDF(P) =  1 $$, with $$P$$ taking values between 0 and 1.  This is a uniform random variable, each observed p is as likely as any other.
-
+>  **Warning: this is more advanced material, you may want to skip it if you don't have some mathematical background**
+>  
+>  >  Let's take T as your random variable. Note, the definition of a [random variable](https://en.wikipedia.org/wiki/Random_variable) is not straightforward, but roughly speaking it is a function that "maps from an outcome of the events (that is, from a point in a probability space) to a mathematically convenient outcome label, usually a real number." 
+>  
+>  We write *"equal by definition"* with the symbol $$\equiv$$. We note the random variables with capital letters and specific values taken by lower case letters. $$F_T$$ is the cumulative density function (CDF) of $$T$$, and $$F_P$$ is the CDF of $$P$$. 
+>  
+>  We define our variable $$P$$ with:
+>  $$ P \equiv F_T(T) $$ <!--- Where $$ F $$ is the CDF of $$ T $$ --->
+>  
+>  This means that $$ F_T(t) \equiv Pr(T \leq t) $$. We have by definition of $$P$$ and $$F_T$$: 
+>  
+>  $$ Pr(P \leq p) = Pr(F_T(T) \leq p) $$
+>  
+>  If F is invertible, and for continuous random variable with strictly monotonic CDF (CDF that are never "flat") it is the case,  $$F_T$$ has an inverse $$F_T^{-1}$$, and we can apply this function on both side of the inequality without changing the inequality: 
+>  
+>  $$ F_T(T) \leq p \equiv F_T^{-1}F_T(T) \leq F_T^{-1}(p) $$
+>  
+>  Hence, 
+>  
+>  $$ Pr(P \leq p) = Pr(T \leq F^{-1}(p)) \equiv F_T(F_T^{-1}(p)) = p $$
+>  
+>  So, 
+>  
+>  $$ Pr( P \leq p) \equiv F_p(p) = p $$
+>  
+>  Therefore, the CDF of $$P$$ is the identity function $$ CDF(x)=x $$. As the probability distribution function (PDF) is simply the derivative of the CDF (when this derivative exists) we finally have that $$ PDF(P) =  1 $$, with $$P$$ taking values between 0 and 1.  This is a uniform random variable, each observed p is as likely as any other.
+>  
 This fact is used latter in this course on for instance to demonstrate the presence in p-hacking in the litterature. See lesson on what is p-hacking.
 
 ## Bayesian statistics 
 
 Finding the right level of introduction for this topic is not easy. We propose to start with [this blog](https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/) which should give you a good introduction. 
 
-There is also [this one](http://faculty.washington.edu/kenrice/BayesIntroClassEpi515.pdf). Exercices on this still need to be developed [TBD]. 
+There is also [this one](http://faculty.washington.edu/kenrice/BayesIntroClassEpi515.pdf). Exercises on this still need to be developed [TBD]. 
 
 
 Bayesian statistics are *rarely* used, because researchers are often unsure on how to use them, and because they sometimes can be used to include subjective knowledge. However, they have a better theoretical ground and in many cases they should be used. 
