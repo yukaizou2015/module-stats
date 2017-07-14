@@ -92,8 +92,8 @@ This [paper](https://doi.org/10.1053/j.seminhematol.2008.04.003) by Steven Goodm
 
 For this exercise, you need to be able to generate some values from a normal
 distribution and perform a test on the mean of these values. You can use
-python, R, or octave/matlab for this. An example in python with the solution
-to the exercise is given here [TBD]. 
+python, R, or octave/matlab for this. An example in python with the solutions
+to the exercise is given [here](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/P-value-exercise.ipynb). 
 
 * Generate some N sample normal data from a Gaussian distribution (mean=0,
   sigma=1, N=30)  - Let's think of this as our sampling noise. We are
