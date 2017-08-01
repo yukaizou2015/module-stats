@@ -51,6 +51,34 @@ The key concepts are:
 You may hear a statistician talk about "a statistic". For instance, $$t$$ or $$F$$ values are statistics distributed according to a Student or a Snedecor distribution. But what is a "statistic" ? 
 In simple words, a statistic is any function of the data. The data are generally randomly sampled, and their distribution is often modelled with known distribution. Let's imagine that you have measured something interesting on $$N$$ subject, say that the measures are the $$Y_1,Y_2, ..., Y_N$$, and you are interested in the mean of the $$Y$$. The mean is a function of the data. It is a statistics. So would be the product of the $$Y$$s, etc. Since the $$Y$$s are random in the sense that they are randomly sampled from a population, and that another sampling would yield different values, the statistic is a random variable as well. For some interesting statistics, such as the average divided by the standard deviation, the distribution of the statistic is known if we assume the distribution of the original data to be known (often, a normal distribution is assumed).
 
+
+## Distributions 
+
+You need to understand what is a *probability distribution* (or simply *distribution*) of a random variable. Here are some links on what are probability distributions:
+
+[Definition of distributions](https://en.wikipedia.org/wiki/Probability_distribution)
+
+There is also this link that will tell you about statistical distributions: 
+
+[this link](http://mathworld.wolfram.com/StatisticalDistribution.html)
+
+Next, we need to be able to use the [Cumulative distribution function (CDF)](https://en.wikipedia.org/wiki/Cumulative_distribution_function). For a given value $$x$$, the CDF will give us the probability that the random variable will be less (or equal) than $$x$$. 
+The CDF is related to its Complementary cumulative distribution function (also called tail distribution, or survival function :  $$ SF(x) =  1 - CDF(x) $$. 
+
+See the [survival function](https://en.wikipedia.org/wiki/Survival_function) in wikipedia.
+
+The cumulative density function of a random variable X is often noted $$F_X$$ or simply $$F$$ when there is no ambiguity. 
+
+> ## Questions on distribution, probability density function, and cumulative density function. --->
+>
+>  - Imagine that we have a normally distribution with a mean -20 and a sigma of 1. Will the CDF at 0 be flat and have a value of 0 or flat with a value of 1?
+>  - Same question as above with a mean of the normal distribution equal to 20 ?
+>  - If the mean of the normal distribution equal to 0, will the CDF be "flat" around 0 ? will the value be .5, .95 or .975 ?
+>  - Can we talk of a CDF of a discrete random variable (for instance, taking values 1,2,3,4,5,6 like a dice)?   
+>  - Can we talk of a CDF of a categorical random variable (for instance, taking values blue white red)?   
+{: .challenge}
+
+
 ## P-value
 
 > ## Can answer these questions? Even if yes, you may want to read the p-value section --->
@@ -153,26 +181,6 @@ This [blog on p-values](http://www.statisticsdonewrong.com/p-value.html)
 - Confidence intervals:
 [Confidence intervals:](http://rpsychologist.com/d3/CI/)
 
-
-## Distributions 
-
-You need to understand what is a *distribution*. Here are some links on distributions and CDFs:
-
-[Definition of distributions](https://en.wikipedia.org/wiki/Probability_distribution)
-
-There is also this link that will tell you about statistical distributions: 
-
-[this link](http://mathworld.wolfram.com/StatisticalDistribution.html)
-
-
-Next, we need to be able to use the [Cumulative Density function](https://en.wikipedia.org/wiki/Cumulative_distribution_function). 
-
-The CDF is related to its Complementary cumulative distribution function (also called tail distribution, or survival function :  $$ SF(x) =  1 - CDF(x) $$. 
-
-The cumulative density function of a random variable X is often noted $$F_X$$ or simply $$F$$ when there is no ambiguity. 
-
-### Questions on distribution, probability density function, and cumulative density function. 
-[TBD]
 
 
 ### Going further : what is the distribution of a p-value?

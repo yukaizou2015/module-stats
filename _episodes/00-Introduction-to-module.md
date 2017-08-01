@@ -34,8 +34,8 @@ That really depends on your familiarity with statistical concepts and your capac
 1. Statistical basis for reproducible neuroimaging
 2. Effect sizes and effect sizes variation
 3. Statistical power in neuroimaging and Statistical reproducibility: Positive predictive values
-4. P-hacking, file drawer effect 
-5. Meta analyses in neuroimaging
+4. [P-hacking, file drawer effect]
+5. [Meta analyses in neuroimaging]
 6. [Statistical methods in available software]
 7. [Machine learning and prediction]
 8. Culture and ethical aspects: last but certainly not least. 
