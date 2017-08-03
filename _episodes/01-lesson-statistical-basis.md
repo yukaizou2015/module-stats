@@ -38,19 +38,24 @@ Please read the sections on this webpage:
 
 The key concepts are:
 
-1. A sample is a subset of a population
+1. A sample is a subset of a population: if you resample you will get a different result (different mean, different standard deviation). 
 
-2. The quality of the sample is related to the generalizability of the conclusions to the larger population of interest.
+2. The quality of the sample is related to the generalizability of the conclusions one can draw on the larger population of interest.
 
-3. Most statistics are based on the assumption that, in the long run, statistics based on repeated samples from a population are distributed about the true (unobserved) population parameter.
+3. Say you sample 30 participants from a seamingly infinite population. Say you compute an average of some characteristics, for instance participant brain volume, $$M$$ across these 30 subjects. The *sampling distribution* of $$M$$ is the distribution you would obtain if you were to repeat de sampling of 30 participants a great number of times, for instance 10,000 times. For each sampling of 30 values, you would compute the mean of the sampling, and see what is the distribution of this mean across all 10,000 samplings. These 10,000 values should be distributed about the true (unobserved) mean of the population.
 
-### Exercise on sampling : [TBD]
+
+> ## Questions on sampling. --->
+>
+>  - If you sample two times a population, and compute the two means of these two samples, will you get necessarily two close values ? 
+>  - Is the difference between these two means going to be always smaller if the sample size increase to say 60? 
+>  - Same question as above, but in the case the sample size increase to a very large number ?
+{: .challenge}
 
 ## Statistics and random variables
 
 You may hear a statistician talk about "a statistic". For instance, $$t$$ or $$F$$ values are statistics distributed according to a Student or a Snedecor distribution. But what is a "statistic" ? 
-In simple words, a statistic is any function of the data. The data are generally randomly sampled, and their distribution is often modelled with known distribution. Let's imagine that you have measured something interesting on $$N$$ subject, say that the measures are the $$Y_1,Y_2, ..., Y_N$$, and you are interested in the mean of the $$Y$$. The mean is a function of the data. It is a statistics. So would be the product of the $$Y$$s, etc. Since the $$Y$$s are random in the sense that they are randomly sampled from a population, and that another sampling would yield different values, the statistic is a random variable as well. For some interesting statistics, such as the average divided by the standard deviation, the distribution of the statistic is known if we assume the distribution of the original data to be known (often, a normal distribution is assumed).
-
+In simple words, a statistic is any function of the data. The data are generally randomly sampled, and their distribution is often modelled with known distribution. Let's imagine that you have measured something interesting on $$N$$ subject, say that the measures are the $$Y_1,Y_2, ..., Y_N$$, and you are interested in the mean of the $$Y$$. The mean is a function of the data. It is a "statistic". So would be the product of the $$Y$$s, etc. Since the $$Y$$s are random, say that they are randomly sampled from a population, and that another sampling would yield different values, the statistic is a random variable as well. For some interesting statistics, such as the average divided by the standard deviation, the distribution of the statistic is known if we assume the distribution of the original data to be known (often, a normal distribution is assumed). For example, the sum of the square of normally distributed data is distributed following a Chi2 distribution. 
 
 ## Distributions 
 
@@ -69,7 +74,7 @@ See the [survival function](https://en.wikipedia.org/wiki/Survival_function) in 
 
 The cumulative density function of a random variable X is often noted $$F_X$$ or simply $$F$$ when there is no ambiguity. 
 
-> ## Questions on distribution, probability density function, and cumulative density function. --->
+> ## Questions on distribution and cumulative distribution function (CDF). --->
 >
 >  - Imagine that we have a normally distribution with a mean -20 and a sigma of 1. Will the CDF at 0 be flat and have a value of 0 or flat with a value of 1?
 >  - Same question as above with a mean of the normal distribution equal to 20 ?
