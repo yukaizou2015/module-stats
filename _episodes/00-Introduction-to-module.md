@@ -3,7 +3,7 @@ title: "An introduction to the Statistics in reproducibility module"
 teaching: "The time you will need will depend on your background, on average about 20 hours (eg 5 weeks 4 hours per week).  "
 exercises: "Try to assess your working knowledge of the module with the exercises." 
 questions:
-- "Who is this modulde for ?"
+- "Who is this module for ?"
 - "How can I get some help if I get stuck on solving for an exercise or a question ?"
 - "How can I validate this module ?"
 objectives:
