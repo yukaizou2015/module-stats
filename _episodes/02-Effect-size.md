@@ -3,19 +3,17 @@ title: "Effect size and variation of effect sizes in brain imaging"
 teaching: 120
 exercises: 180 
 questions: 
-- "Variance explained "
+- "Variance explained"
 - "What is an effect size, statistical versus biological or medical relevance"
-- "The variation of effect sizes: "
-- "Sampling, Models, Processing parameters, Population, effect of unknown parameters"
+- "Why effect sizes vary: Sampling, Models, Processing parameters, Population, effect of unknown parameters"
 - "Other measures of effect size"
 objectives:
-- "After this lesson, you should have a good knowledge of what is an effect size, and why it is important to report it and assess it. "
+- "After this lesson, you should have a good knowledge of what is an effect size, and why it is important to estimate, report and assess. "
 keypoints:
 - "Effect sizes come in many forms"
 - "Significance is not relevance"
 - "Difference between the raw effect size and the cohen's d effect size"
-- "How can the effect size vary ? Why is it important to know about this?"
-
+- "How can the effect size vary?  Why is it important to know about this?"
 - Effect sizes are under reported, not well understood, and are crucial for our scientific understanding. Let's fix this.
 
 ---
