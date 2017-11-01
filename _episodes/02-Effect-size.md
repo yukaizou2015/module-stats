@@ -5,7 +5,7 @@ exercises: 180
 questions: 
 - "Variance explained"
 - "What is an effect size, statistical versus biological or medical relevance"
-- "Why effect sizes vary: Sampling, Models, Processing parameters, Population, effect of unknown parameters"
+- "Why effect sizes vary: sampling, models, processing parameters, population, effect of unknown parameters"
 - "Other measures of effect size"
 objectives:
 - "After this lesson, you should have a good knowledge of what is an effect size, and why it is important to estimate, report and assess. "
@@ -28,10 +28,14 @@ Is the overview clear to you? Just to give you a concrete example if it is not, 
 
 Now, let's say we are studying the activity of the visual cortex in the CG. You want to know if this is different from zero. The *estimated* (or sampled) effect size for the CG is 5%. The **normalized** effect size will be divided by the **standard deviation of the data**, so 5/1 = 5 for CG, and 8/2=4 for the PG, while the corresponding t-tests will be t=5/(1/sqrt(30-1)) and t=8/(2/sqrt(30-1)). The true effect size (the one Wikipedia would write in greek letter) would be the value of the BOLD responses for the **whole populations** of control and patients. 
 
-How would you define the *estimated* effect size of the difference of the two population? The "raw" / "not normalized" effect size would simply be 8-5\%. To define the **normalized** we need to estimate the variability of the data, and this can be done using the pooled standard deviation (something close to the average of the two standard deviations weighted by the group sizes). See "Cohen's d" in the "Difference family: Effect sizes based on differences between means" section of  [wikipedia](https://en.wikipedia.org/wiki/Effect_size).  See also the use of the [Welch's](https://en.wikipedia.org/wiki/Welch%27s_t-test) and its estimation of the statistics degrees of freedom, which could provide another way to define the normalized effect size. 
- 
+How would _you_ define the *estimated* effect size of the difference of the two population? The "raw" / "not normalized" effect size would simply be (8-5)%. To define the **normalized** we need to estimate the variability of the data, and this can be done using the pooled standard deviation (something close to the average of the two standard deviations weighted by the group sizes). See "Cohen's d" in the "Difference family: Effect sizes based on differences between means" section of  [wikipedia](https://en.wikipedia.org/wiki/Effect_size).  See also the use of the [Welch's](https://en.wikipedia.org/wiki/Welch%27s_t-test) and its estimation of the statistics degrees of freedom, which could provide another way to define the normalized effect size. 
+
+As you see now, "effect size" is not necessarily a simple topic. It requires to stand back and think of what is most appropriate to report, and often, you will need to report several values. 
 
 Using a normalized effect size is that it makes comparisons possible across samples with different standard deviation, but takes us away from the original data. See more on this in some further episodes.
+
+This [article](http://staff.bath.ac.uk/pssiw/stats2/page2/page14/page14.html) is a good introduction to the subject, please read it and make sure everything is now familiar. 
+
 
 
 <!-- **Questions:**
@@ -105,14 +109,14 @@ In short, be aware that effect size may be "sample size" dependent. One interest
 
 #### Variation of effect size with a different model
 
-Let's say you are interested in the size of the hippocampus and it's difference between males and females. Say that on average the males heads are larger than the females head, to look at the gender effect we would need to correct for all other effects that may affect the size of the hippocampus. The problem here is that we don't know which factors affect this variable. Using the PING datasets, we looked at this recently, and found that including some phenotypic data made a large difference on the the effect size of gender. 
+Let's say you are interested in the size of the hippocampus and its  difference between males and females. Say that on average the males heads are larger than the females head, to look at the gender effect we would need to correct for all other effects that may affect the size of the hippocampus. The problem here is that we don't know which factors affect this variable. Using the PING datasets, we looked at this recently, and found that including some phenotypic data made a large difference on the the effect size of gender. 
 
 First, many datasets would not have an extensive phenotyping, and so we may see in the literature results that may be influenced by the fact that covariables were simply not availalbe. Second we actually don't know if there are not any other variable that we should have measured and that may influence this gender effect.
 
-<u> To do: </u>  Read the last part of the [Nakagawa and Cuthill 2007 paper](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2007.00027.x/full, "Effect size, confidence intervals, p-values") from "(2) Covariates, multiple regression, GLM and effect size calculations". 
+**Exercise:** 
 
-	- In this paper, we have 
-	> the effect size estimates for a given variable will vary according to what other predictor variables are in the model
+	Read the last part of the [Nakagawa and Cuthill 2007 paper](http://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2007.00027.x/full, "Effect size, confidence intervals, p-values") from "(2) Covariates, multiple regression, GLM and effect size calculations". 
+	- In this paper, we see that the effect size estimates for a given variable will vary according to what other predictor variables are in the model. 
 	How will this effect size varies if the other predictor variable introduced is correlated to the predictor we want to compute the effect size of ? and anti correlated ? what if we do not include a correlated (or anti correlated) regressors ?
 	- Can you understand the principle of equation 10? Remember than the t value is constructed by the ratio of  of the non normalized effect size and an estimation of the variance of this effect size. Compare (10) to what you would get with a simple GLM t test equation where the design matrix encode simply groups with two dummy variables that have $$n_1$$ and $$n_2$$ "ones" on the first and second column respectively. 
 
@@ -146,5 +150,9 @@ Some formula are interesting:
 $$ 
 \frac{\text{Explained  variance  by  the  predictors of interest}}{\text{Residual error variance}}
 $$
+
+### Effect size calculation
+
+[This site](https://www.psychometrica.de/effect_size.html) provides with a number of online calculations of effect sizes. Beware that the site begins with "Statistical significance means that a result may not be the cause of random variations within the data". This is a true statement, it _may not_ be caused by random variation of the data (sampling) but _it also may_ (the rate should be the risk of error of type I). 
 
 
