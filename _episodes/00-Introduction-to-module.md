@@ -9,9 +9,9 @@ questions:
 objectives:
 - "Teach neuroimagers about the statistical aspects of reproducibility"
 - "Have a collaborative training enterprise: you can improve this module if you know how to do a pull request or raise an issue on github:github.com/repronim/module-stat. See module 'the informatics basics of reproducibility (module 0) on how to do this."
-- "This module should give you a critical eye on most of the current literature and the knowledge to do solid work"
+- "This module should give you a critical eye on most of the current literature and the knowledge to do statistically robust work, hence more replicable"
 keypoints:
-- Reproducible analysis is impacted by statistical analyses.
+- Reproducible analysis is strongly impacted by statistical analyses.
 - Reproducible research requires understanding the notions of sampling, testing, power, model selection. 
 
 ---
@@ -19,9 +19,9 @@ keypoints:
 
 ### What is a ReproNim module ? 
 
-A ReproNim module is a set of "steps" or "episodes", in which we have gathered material on the web to guide you through the acquisition of a concept or tool or technique. You will take this journey and for each episode, we try to then ask you a few questions or do some exercise so that you will have an idea of how much you feel comfortable with the material to be acquired. We are not providing the answers directly on this web site so that this can be taken as a real course, but we will be teaching workshops with the answers and we will have links to the answers.
+A ReproNim module (or course) is a set of "lessons" (or "episodes"), in which we have gathered material on the web to guide you through the acquisition of a concept or tool or technique. You will take this journey and for each episode, we try to then ask you a few questions or do some exercise so that you will have an idea of how much you feel comfortable with the material to be acquired. We are not providing the answers directly on this web site so that this can be taken as a real course, but we will be teaching workshops with the answers and we will have links to the answers.
 
-### Who is this module for? 
+### Who is this statistical module for? 
 
 The module is for you, if you are not a statistician or an applied mathematic researcher or student, is working with neuroimaging and you want to know about the statistical aspects of reproducibility.
 
@@ -31,9 +31,10 @@ That really depends on your familiarity with statistical concepts and your capac
 
 ### What are the episodes for this module? 
 
-1. Statistical basis for reproducible neuroimaging
+1. [Statistical basis for reproducible neuroimaging](http://www.reproducibleimaging.org/module-stats/00-Introduction-to-module/)
 2. Effect sizes and effect sizes variation
-3. Statistical power in neuroimaging and Statistical reproducibility: Positive predictive values
+3. P-values and their issues 
+4. Statistical power in neuroimaging and Statistical reproducibility: Positive predictive values
 4. [P-hacking, file drawer effect]
 5. [Meta analyses in neuroimaging]
 6. [Statistical methods in available software]
@@ -78,11 +79,12 @@ There are time to time an article we want you to read and is behind paywall. If 
 
 ### And this is our logo:
 
-<p><img src="https://raw.githubusercontent.com/ReproNim/artwork/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo should be seen in html" /></p>
+<p><img src="https://github.com/ReproNim/artwork/blob/master/logo/square-256.png" alt="our logo should be seen in html - but is it ?" /></p>
 <!---
 <img src="https://github.com/ReproNim/artwork/blob/master/logo/repronim-logo3.2_nobg_256x256.png" alt="our great logo" >
 
 ![an image]({{site.root}}/fig/repronim-logo3.svg)
+"https://raw.githubusercontent.com/ReproNim/artwork/master/logo/repronim-logo3.2_nobg_256x256.png"
 --->
 
 

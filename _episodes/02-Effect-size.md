@@ -142,7 +142,6 @@ When the problem can be stated in a "prediction" framework, the prediction rate 
 
 Please read the wikipedia [article](https://en.wikipedia.org/wiki/Mutual_information) on this.  
 
-
 	- Why would mutual information be an acceptable and possibly interesting effect size ?
 	- Would the problem of other unknown predictor be alleviated by this measure ?
 

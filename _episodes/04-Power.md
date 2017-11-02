@@ -17,9 +17,14 @@ keypoints:
 
 ## Power : definition and some exercices 
 
-First, doing some work on this notebook:
+First, we will be doing some work on this notebook:
 
 [Power](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Power-basics.ipynb)
+
+How to work with the notebook ? 
+There are two cases.
+1. You do not really know python, and how to install the jupyter notebook. You can still read the notebook, skipping the code sections. The notebook will introduce some definitions, and then play with different settings. But the true benefit comes if you can install the jupyter project [see here](http://jupyter.readthedocs.io/en/latest/install.html) and actually play with the code, for instance changing the sample size or effect size to understand better what power is.
+2. Download the notebook, and try to understand the concepts and the code. If the code is unclear, please make an issue on the repronim [github site](https://github.com/ReproNim/module-stats/tree/gh-pages/notebooks)
 
 ## Some simple simulations  
 
