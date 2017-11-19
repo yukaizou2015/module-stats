@@ -25,7 +25,7 @@ As often, any headline with a question mark is answered with a "no". But p-value
 >  - A p-value is telling me that my alternative hypothesis is likely (H1 is probably true)
 >  - A p-value is telling me that my null hypothesis is unlikely (H0 is probably false)
 >  - A p-value is telling me that my null hypothesis is less likely than my alternative hypothesis
->  - A p-value tells me that my data are improbable under the null hypothesis 
+>  - A small p-value tells me that my data are improbable under the null hypothesis 
 >  - The effect size is more important to know than the p-value in the sense that it has more biological interpretation
 >  - A p-value is more important for science because one cannot publish without a p-value, but one can publish without reporting an effect size 
 {: .challenge}
