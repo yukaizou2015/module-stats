@@ -18,6 +18,8 @@ As often, any headline with a question mark is answered with a "no". But p-value
 
 ## P-value
 
+### Starting with a little challenge !
+
 > ## Can answer these questions? Even if yes, you may want to read the p-value section --->
 >
 >  - A p-value is telling me that my alternative hypothesis is likely (H1 is probably true)
@@ -52,6 +54,8 @@ The key concepts and *limitations* are:
 Other resource: 
 
 This [paper](https://doi.org/10.1053/j.seminhematol.2008.04.003) by Steven Goodman (unfortunately seems to be under pay wall, please email us if you don't have access) tells you about the mis-conceptions of p-values. 
+
+
 
 ### Exercise on p-values
 
@@ -112,11 +116,21 @@ These interactive visualization are helpful to understand the concepts.
 [Confidence intervals:](http://rpsychologist.com/d3/CI/)
 
 
+## P-value and **base rate fallacy**: to be read, and read again
 
-## P-value and **base rate fallacy**:
+The base rate fallacy is one of the most common source of error and mis-conception.
+Here is a great article about it: 
 
-This [blog on p-values](http://www.statisticsdonewrong.com/p-value.html)
-   takes as an example the number of drugs tested on individuals, or the mamography test for cancer, but easily generalize to number of voxels or ROIs tested. It introduces to very important concepts, read carefully and make sure you understand what is the base rate fallacy.  After reading, you should know more not only Type I and Type II errors, but importantly, on what the issue of the having low prior probability for a hypothesis. 
+[Base rate fallacy](https://www.statisticsdonewrong.com/p-value.html)
+
+This takes as an example the number of drugs tested on individuals, or the mamography test for cancer, but easily generalize to number of voxels or ROIs tested. It introduces to very important concepts, read carefully and make sure you understand what is the base rate fallacy.  After reading, you should know more not only Type I and Type II errors, but importantly, on what the issue of the having low prior probability for the alternative hypothesis. 
+
+> ## Can answer these questions? --->
+>
+>  - Can you think of a situation where the base rate fallacy occurs in brain imaging ? 
+>  - Can you propose a way to avoid the fallacy ? 
+{: .challenge}
+
 
 
 ## Going further : what is the distribution of a p-value?

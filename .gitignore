@@ -6,3 +6,4 @@ __pycache__
 *.swp
 _tmp
 notebooks/.ipynb_checkpoints/
+Local-not-to-commit
