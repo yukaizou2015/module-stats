@@ -24,9 +24,9 @@ keypoints:
 
 * $$T_N$$ : Value of T when test is not significant (eg $$T = T_N$$)
 
-* $$\alpha$$ : false positive rate - probability to reject $$H_0$$ when $$H_0$$ is true ($$H_A$$ is false)
+* $$\alpha$$ : false positive rate - probability to reject $$H_0$$ when $$H_0$$ is true ($$H_A$$ is false) $$ = P(T_S \mid H_0) $$ 
 
-* $$\beta$$ : false negative rate - probability to accept $$H_0$$ when $$H_A$$ is true ($$H_0$$ is false)
+* $$\beta$$ : false negative rate - probability to accept $$H_0$$ when $$H_A$$ is true ($$H_0$$ is false) $$ = P(T_N \mid H_A) $$
 
 * power = $$1-\beta$$ 
 
@@ -34,11 +34,11 @@ keypoints:
 
 ### Marginalization
 
-Let's consider that the hypotheses are *random events*, i.e. they have associate probabilities. For instance, the probability of $$H_0$$ to be true could be 50%. $$Pr(H_A = True) + Pr(H_0 = False) = 1$$.
+Let's consider that the hypotheses are *random events*, i.e. they have associate probabilities. For instance, the probability of $$H_0$$ to be true could be 50%. $$P(H_A = True) + P(H_0 = False) = 1$$.
 
 We simply note 
 
-$$Pr(H_A = True)$$ as $$Pr(H_A)$$  
+$$P(H_A = True)$$ as $$P(H_A)$$  
 
 for 
 $$H \in (H_A, H_0)$$ 
@@ -46,11 +46,11 @@ $$H \in (H_A, H_0)$$
 
 We are interested in updating the probability of $$H_A$$ and $$H_0$$ as a result of a test on some collected data.  
 
-This updated probability is $$Pr(H_A \mid T=t), t \in (T_S, T_N)$$,  
+This updated probability is $$P(H_A \mid T=t), t \in (T_S, T_N)$$,  
 
 the probability of $$H_A$$ **given** the result $$t$$ of the test.
 
-$$Pr(H_A \mid T)$$ is called the *posterior* probability because it is the probability after the test result.
+$$P(H_A \mid T)$$ is called the *posterior* probability because it is the probability after the test result.
 
 The marginalization theorem is simply that 
 
@@ -65,39 +65,111 @@ Here:
 
 In the future, to simplify the notation, we note $$P(B=b)$$ as $$P(b)$$
 
+
 ## Bayes theorem
 
-[Bayes theorem](http://en.wikipedia.org/wiki/Bayes'_theorem#Derivation):
+The famous theorem [Bayes theorem](http://en.wikipedia.org/wiki/Bayes'_theorem#Derivation):
 
 $$P(A, B) = P(A \mid B) P(B)$$
 
 and therefore
 
-$$P(A \mid B) = \Frac{P(B, A)}{P(B)} = \frac{P(B \mid A) P(A)}{P(B)}$$
-
+$$P(A \mid B) = \frac{P(B, A)}{P(B)} = \frac{P(B \mid A) P(A)}{P(B)}$$
 
 Putting these two together we have : 
 
-
 $$P(A) = \sum_{b_i} P(A \mid B=b_i) P(B=b_i)$$
 
-Now, apply this to the probability of the test results $T$. The test takes a value either under  $H_A$ or $H_0$.
-The probability of a *signficant* result of the test $T=T_S$ is :
+## Apply this to our question:
 
-$Pr(T=T_S) = P(T_S) = Pr(T_S \mid H_A) Pr(H_A) + Pr(T_S \mid H_0) Pr(H_0)$
+Now, apply this to the probability of the test results $$T$$. 
 
-## Some work on this notebook in python
+The test takes a value either under  $$H_A$$ or $$H_0$$.
 
-First, we will be doing some work on this notebook:
+The probability of a *significant* result of the test $$T=T_S$$ is :
 
-[Power](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Positive-Predictive-Value.ipynb)
+$$ P(T_S) = P(T_S \mid H_A) P(H_A) + P(T_S \mid H_0) P(H_0)$$
+
+
+What is the posterior probability of $$H_A$$ given that the test is significant?
+
+$$P(H_A \mid T_S) = \frac{P(T_S \mid H_A) P(H_A)}{P(T_S)} = \frac{P(T_S \mid H_A) P(H_A)}{P(T_S \mid H_A) Pr(H_A) + Pr(T_S \mid H_0) Pr(H_0)}$$
+
+We have $$P(T_S \mid H_A)$$, $$P(T_S \mid H_0)$$ from the first column of the table above. Substituting into the equation.
+
+And we know that 
+
+$$ P(T_S \mid H_A) = 1 - P(T_N \mid H_A) = 1 - \beta $$
+
+Substituting:
+
+$$P(H_A \mid T_S) = \frac{(1 - \beta) P(H_A)}{(1 - \beta) P(H_A) + \alpha P(H_0)}$$
+
+Defining:
+
+$$\pi := Pr(H_A)$$, hence: $$1 - \pi = Pr(H_0)$$
+
+we have:
+
+$$P(H_A \mid T_S) = \frac{(1 - \beta) \pi}{(1 - \beta) \pi + \alpha (1 - \pi)}$$
 
 ## Some exercises  
 
+
+> ## Task: Create a new DataLad dataset called `bids`
+>
+> Use the [datalad create] command
+>
+> > ## Solution
+> > ~~~
+> > % datalad create bids
+> > ~~~
+> > {: .bash}
+> {: .solution}
+>
+{: .challenge}
+
+We now have the new dataset in a directory `bids/`. For all further commands
+we will change into this directory to be able to use relative paths.
+
+> ~~~
+> % cd bids
+> ~~~
+> {: .bash}
+
+> ## Task: Play with the PPV - understand the impact of the parameters 
+>
+>  
+>     Pick a recent study that you have done in fMRI or using anatomical data.  
+>     try to propose values for power, alpha, and prior
+>     Vary prior and plot results 
+>
+> > ## Solution
+> > ~~~
+> >def PPV(R, Pw, alpha, verbose=True):
+> >   ppv = (Pw * R)/(Pw*R + alph)
+> >   if verbose:
+> >       print("with odd ratio=%3.2f, "
+> >              "power=%3.2f, alpha=%3.2f, "
+> >              "we have PPV=%3.2f" %(R,Pw,alph,ppv))
+> >   return ppv
+> > ~~~
+> > {: .python}
+> {: .solution}
+{: .challenge}
+
 > Exercise: 
->        Pick a recent study that you have done in fMRI or using anatomical data.  
->        try to propose values for power, alpha, and prior
->        Vary prior and plot results 
+>        With the same initial setting, and a prior of 1/4 for $$H_A$$ vary power and plot results.  
+
+> Exercise: 
+>        With the same initial setting, a power of 0.8 and a prior of 1/4 for $$H_A$$ vary $$\alpha$$ and plot results.  
+
+## This is also in a notebook work on this notebook in python
+
+First, we will be doing some work on this 
+[PPV](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Positive-Predictive-Value.ipynb)
+notebook.
+
 
 
 ## How to work with the notebooks ? 
