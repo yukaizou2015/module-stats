@@ -125,7 +125,10 @@ $$ P(H_A \mid T_S) = \frac{W R}{W R  + \alpha} $$
 >  
 >     Pick a recent study that you have done in fMRI or using anatomical data.  
 >     try to propose values for power, alpha, and prior
->     Vary power from .1 to .9 and print or plot results 
+>     Vary power from .1 to .9 and print or plot results
+> 
+>     First define a function to compute the PPV from power, odd ratio and alpha
+>     The solution below is in Python, but feel free to do it in your favorite scripting language
 >
 > > ## Solution
 > > ~~~
@@ -156,32 +159,117 @@ $$ P(H_A \mid T_S) = \frac{W R}{W R  + \alpha} $$
 > >                "Power=%3.2f, alpha=%3.2f, "
 > >                "We have PPV=%3.2f" %(odd_ratio,power,alph,ppv))
 > >     return ppv
-> > 
+> > ~~~
+> > {: .python}
+> {: .solution}
+>  
+>     Second define a function to display easily the results 
+> 
+> > ## Solution
+> > ~~~
+> > def plot_ppv(xvalues, yvalues, xlabel, ylabel, title):
+> >    '''
+> >    simply plot yvalues against xvalues, with labels and title
+> >    
+> >    Parameters:
+> >    -----------
+> >    xvalues, yvalues : iterables of numbers 
+> >    labels and title : string
+> >    '''
+> >    
+> >    fig = plt.figure();
+> >    axis = fig.add_subplot(1, 1, 1)
+> >    axis.plot(xvalues, yvalues, color='red', marker='o', linestyle='dashed',
+> >            linewidth=2, markersize=14);
+> >    axis.set_xlabel(xlabel,fontsize=20);
+> >    axis.set_ylabel(ylabel,fontsize=20);
+> >    axis.set_title(figure_title, fontsize=20);
+> >    return fig, axis
+> > ~~~
+> > {: .python}
+> {: .solution}
+>
+>     Last play with parameters : first, let's vary power
+> 
+> > ## Solution
+> > ~~~
+> >
+> > #-----------------------------------------------------------------
+> > # An example
 > > R = 1./5.
 > > Pw = .5
 > > alph = .05
 > > ppv = PPV_OR(R, Pw, alph)
 > > 
+> > #-----------------------------------------------------------------
+> > # Vary power:
+> > Pw = np.arange(.1,1,.2)
+> > ppvs = [PPV_OR(R, pw, alph, verbose = False) for pw in Pw]
+> > xlabel = 'Power'
+> > ylabel = 'PPV'
+> > figure_title = 'With an odd ratio of {odd_ratio}'.format(odd_ratio=R)
+> > 
+> > #-----------------------------------------------------------------
+> > # print
+> > plot_ppv(Pw, ppvs, xlabel, ylabel, figure_title);
+> > ~~~
+> > {: .python}
+> {: .solution}
+>
+>     Then, let's vary odd ratio 
+> 
+> > ## Solution
+> > ~~~
+> > #-----------------------------------------------------------------
+> > # Vary odd ratio:
+> > Pw = .5
+> > alph = .05
+> > odd_ratios = np.arange(.05,.5,.05)
+> > ppvs = [PPV_OR(R, Pw, alph, verbose = False) for R in odd_ratios]
+> > 
+> > #-----------------------------------------------------------------
+> > # print
+> > figure_title = 'With a power of {power}'.format(power=Pw)
+> > xlabel = 'odd_ratios'
+> > ylabel = 'PPV'
+> > plot_ppv(odd_ratios, ppvs, xlabel, ylabel, figure_title);
+> > 
+> > ~~~
+> > {: .python}
+> {: .solution}
+>
+>     Last, let's vary alpha, remember that p-hacking may give us large type I risk of errors 
+> 
+> > ## Solution
+> > ~~~
+> > 
+> > #-----------------------------------------------------------------
+> > # Vary alpha:
+> > Pw = .5
+> > R = 1/5
+> > alphas = np.arange(0, .2, 0.01)# [0.001, .005, 0.01, 0.05, 0.1] #, 0.2, 0.3, 0.4, 0.5]
+> > ppvs = [PPV_OR(R, Pw, alph, verbose = False) for alph in alphas]
+> > 
+> > #-----------------------------------------------------------------
+> > # print
+> > xlabel = 'alpha'
+> > ylabel = 'PPV'
+> > figure_title = 'With a power of {power} and odd ratio of {odd_ratio}'.format(
+> >                                         power=Pw, odd_ratio=R)
+> > plot_ppv(alphas, ppvs, xlabel, ylabel, figure_title);
+> > #-----------------------------------------------------------------
 > > ~~~
 > > {: .python}
 > {: .solution}
 {: .challenge}
 
-> Exercise: 
->        With the same initial setting, and a prior of 1/4 for $$H_A$$ vary power and plot results.  
+## This is also in a python notebook 
 
-> Exercise: 
->        With the same initial setting, a power of 0.8 and a prior of 1/4 for $$H_A$$ vary $$\alpha$$ and plot results.  
-
-## This is also in a notebook work on this notebook in python
-
-First, we will be doing some work on this 
+The notebook is : 
 [PPV](https://github.com/ReproNim/module-stats/blob/gh-pages/notebooks/Positive-Predictive-Value.ipynb)
-notebook.
 
 
-
-## How to work with the notebooks ? 
+### How to work with the notebooks ? 
 
 There are two cases.
 
@@ -192,6 +280,7 @@ benefit comes if you can install the jupyter project [see
 here](http://jupyter.readthedocs.io/en/latest/install.html) and actually play
 with the code, for instance changing the sample size or effect size to
 understand better what power is.
+
 2. Download the notebook, and try to understand the concepts and the code. If
    the code is unclear, please make an issue on the repronim [github
 site](https://github.com/ReproNim/module-stats/tree/gh-pages/notebooks)
