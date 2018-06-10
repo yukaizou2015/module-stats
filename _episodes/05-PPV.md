@@ -103,56 +103,65 @@ $$ P(T_S \mid H_A) = 1 - P(T_N \mid H_A) = 1 - \beta $$
 
 Substituting:
 
-$$P(H_A \mid T_S) = \frac{(1 - \beta) P(H_A)}{(1 - \beta) P(H_A) + \alpha P(H_0)}$$
+$$ P(H_A \mid T_S) = \frac{(1 - \beta) P(H_A)}{(1 - \beta) P(H_A) + \alpha P(H_0)} $$
 
 Defining:
 
-$$\pi := Pr(H_A)$$, hence: $$1 - \pi = Pr(H_0)$$
+$$ \pi := Pr(H_A)$$, hence: $$1 - \pi = Pr(H_0) $$
 
 we have:
 
-$$P(H_A \mid T_S) = \frac{(1 - \beta) \pi}{(1 - \beta) \pi + \alpha (1 - \pi)}$$
+$$ P(H_A \mid T_S) = \frac{(1 - \beta) \pi}{(1 - \beta) \pi + \alpha (1 - \pi)} $$
+
+Defining  $$ R = \frac{\pi}{1-\pi} $$  the odd ratio of the alternative over the null and $$ W = 1 - \beta $$ as power we get
+
+$$ P(H_A \mid T_S) = \frac{W R}{W R  + \alpha} $$
 
 ## Some exercises  
 
-
-> ## Task: Create a new DataLad dataset called `bids`
->
-> Use the [datalad create] command
->
-> > ## Solution
-> > ~~~
-> > % datalad create bids
-> > ~~~
-> > {: .bash}
-> {: .solution}
->
-{: .challenge}
-
-We now have the new dataset in a directory `bids/`. For all further commands
-we will change into this directory to be able to use relative paths.
-
-> ~~~
-> % cd bids
-> ~~~
-> {: .bash}
 
 > ## Task: Play with the PPV - understand the impact of the parameters 
 >
 >  
 >     Pick a recent study that you have done in fMRI or using anatomical data.  
 >     try to propose values for power, alpha, and prior
->     Vary prior and plot results 
+>     Vary power from .1 to .9 and print or plot results 
 >
 > > ## Solution
 > > ~~~
-> >def PPV(R, Pw, alpha, verbose=True):
-> >   ppv = (Pw * R)/(Pw*R + alph)
-> >   if verbose:
-> >       print("with odd ratio=%3.2f, "
-> >              "power=%3.2f, alpha=%3.2f, "
-> >              "we have PPV=%3.2f" %(R,Pw,alph,ppv))
-> >   return ppv
+> > 
+> > def PPV_OR(odd_ratio, power, alpha, verbose=True):
+> >     """
+> >     returns PPV from odd_ratio, power and alpha
+> >     
+> >     parameters:
+> >     -----------
+> >     odd_ratio: float
+> >         P(H_A)/(1-P(H_A))
+> >     power: float
+> >         Power for this study
+> >     alpha: float
+> >         type I risk of error
+> >         
+> >     Returns:
+> >     ----------
+> >     float
+> >         The positive predicted value
+> >     
+> >     """
+> >     
+> >     ppv = (power*odd_ratio)/(power*odd_ratio + alph)
+> >     if verbose:
+> >         print("With odd ratio=%3.2f, "
+> >                "Power=%3.2f, alpha=%3.2f, "
+> >                "We have PPV=%3.2f" %(odd_ratio,power,alph,ppv))
+> >     return ppv
+> > 
+> > R = 1./5.
+> > Pw = .5
+> > alph = .05
+> > ppv = PPV_OR(R, Pw, alph)
+> > 
 > > ~~~
 > > {: .python}
 > {: .solution}
