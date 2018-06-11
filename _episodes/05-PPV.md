@@ -153,11 +153,11 @@ $$ P(H_A \mid T_S) = \frac{W R}{W R  + \alpha} $$
 > >     
 > >     """
 > >     
-> >     ppv = (power*odd_ratio)/(power*odd_ratio + alph)
+> >     ppv = (power*odd_ratio)/(power*odd_ratio + alpha)
 > >     if verbose:
 > >         print("With odd ratio=%3.2f, "
 > >                "Power=%3.2f, alpha=%3.2f, "
-> >                "We have PPV=%3.2f" %(odd_ratio,power,alph,ppv))
+> >                "We have PPV=%3.2f" %(odd_ratio,power,alpha,ppv))
 > >     return ppv
 > > ~~~
 > > {: .python}
