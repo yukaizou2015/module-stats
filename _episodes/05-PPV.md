@@ -32,7 +32,7 @@ keypoints:
 
 ## PPV : definition  
 
-PPV = $$ P(H_A \mid T_S) 
+PPV = $$ P(H_A \mid T_S) $$
 
 ## PPV : How do I compute it ? where does it come from ?  
 
