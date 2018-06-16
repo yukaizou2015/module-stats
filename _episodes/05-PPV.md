@@ -28,100 +28,88 @@ keypoints:
 
 * $$\beta$$ : false negative rate - probability to accept $$H_0$$ when $$H_A$$ is true ($$H_0$$ is false) $$ = P(T_N \mid H_A) $$
 
-* power = $$1-\beta$$ 
+* power = $$W = 1-\beta$$ 
 
-## PPV : definition and some exercices 
+## PPV : definition  
 
-### Marginalization
+PPV = $$ P(H_A \mid T_S) 
 
-Let's consider that the hypotheses are *random events*, i.e. they have associate probabilities. For instance, the probability of $$H_0$$ to be true could be 50%. $$P(H_A = True) + P(H_0 = False) = 1$$.
+## PPV : How do I compute it ? where does it come from ?  
+
+### Let's learn some basic probability 
+
+Let's consider that the hypotheses are *random*, i.e. they have associated probabilities. For instance, the probability of $$H_0$$ to be true could be 20%. We have either $$H_A$$ is true, or else $$P_0$$ is true. Therefore:
+
+$$P(H_A = True) + P(H_0 = True) = 1$$.
 
 We simply note 
 
-$$P(H_A = True)$$ as $$P(H_A)$$  
+$$P(H_A = True)$$ as $$P(H_A)$$ 
 
-for 
+and
+
+$$P(T = T_S)$$ as $$P(T_S)$$  
+
+<!-- for 
 $$H \in (H_A, H_0)$$ 
+-->
 
 
-We are interested in updating the probability of $$H_A$$ and $$H_0$$ as a result of a test on some collected data.  
+We are interested in the probability of a significant test, we can write 
 
-This updated probability is $$P(H_A \mid T=t), t \in (T_S, T_N)$$,  
-
-the probability of $$H_A$$ **given** the result $$t$$ of the test.
-
-$$P(H_A \mid T)$$ is called the *posterior* probability because it is the probability after the test result.
-
-The marginalization theorem is simply that 
-
- $$P(A) = \sum_{b_i} P(A,B = b_i) $$
-
-Here:
-
- $$P(H) = P(H, T=T_S) + P(H, T=T_N)$$
-
- $$ = \sum_{t = T_S, T_N} P(H, T=t) $$
-
-
-In the future, to simplify the notation, we note $$P(B=b)$$ as $$P(b)$$
-
+ $$P(T_S) = P(T_S, H_A) + P(T_S, H_0)$$
 
 ## Bayes theorem
 
-The famous theorem [Bayes theorem](http://en.wikipedia.org/wiki/Bayes'_theorem#Derivation):
+The famous theorem [Bayes theorem](http://en.wikipedia.org/wiki/Bayes'_theorem#Derivation) states:
 
 $$P(A, B) = P(A \mid B) P(B)$$
 
 and therefore
 
-$$P(A \mid B) = \frac{P(B, A)}{P(B)} = \frac{P(B \mid A) P(A)}{P(B)}$$
+$$P(A \mid B) = \frac{P(A, B)}{P(B)} = \frac{P(B \mid A) P(A)}{P(B)}$$
 
-Putting these two together we have : 
-
-$$P(A) = \sum_{b_i} P(A \mid B=b_i) P(B=b_i)$$
+![Bayes theorem in image](../notebooks/figures/bayes.png)
 
 ## Apply this to our question:
 
 Now, apply this to the probability of the test results $$T$$. 
 
-The test takes a value either under  $$H_A$$ or $$H_0$$.
+<!-- The test takes a value either under  $$H_A$$ or $$H_0$$. -->
 
 The probability of a *significant* result of the test $$T=T_S$$ is :
 
+$$ P(T_S) = P(T_S, H_A) + P(T_S, H_0) $$
+
 $$ P(T_S) = P(T_S \mid H_A) P(H_A) + P(T_S \mid H_0) P(H_0)$$
 
-
-What is the posterior probability of $$H_A$$ given that the test is significant?
+What is the probability of $$H_A$$ given that the test is significant (eg, PPV) ?
 
 $$P(H_A \mid T_S) = \frac{P(T_S \mid H_A) P(H_A)}{P(T_S)} = \frac{P(T_S \mid H_A) P(H_A)}{P(T_S \mid H_A) Pr(H_A) + Pr(T_S \mid H_0) Pr(H_0)}$$
 
-We have $$P(T_S \mid H_A)$$, $$P(T_S \mid H_0)$$ from the first column of the table above. Substituting into the equation.
-
 And we know that 
 
-$$ P(T_S \mid H_A) = 1 - P(T_N \mid H_A) = 1 - \beta $$
+$$ P(T_S \mid H_A) = 1 - P(T_N \mid H_A) = 1 - \beta  = W $$
 
 Substituting:
 
-$$ P(H_A \mid T_S) = \frac{(1 - \beta) P(H_A)}{(1 - \beta) P(H_A) + \alpha P(H_0)} $$
+$$ P(H_A \mid T_S) = \frac{W P(H_A)}{W P(H_A) + \alpha P(H_0)} $$
 
 Defining:
+$$ R = \frac{P(H_A)}{P(H_0)} $$ the odd ratio of the alternative over the null  
 
-$$ \pi := Pr(H_A)$$, hence: $$1 - \pi = Pr(H_0) $$
+<!-- $$ \pi := Pr(H_A)$$, hence: $$1 - \pi = Pr(H_0) $$ 
+Defining  $$ R = \frac{\pi}{1-\pi} 
 
-we have:
-
-$$ P(H_A \mid T_S) = \frac{(1 - \beta) \pi}{(1 - \beta) \pi + \alpha (1 - \pi)} $$
-
-Defining  $$ R = \frac{\pi}{1-\pi} $$  the odd ratio of the alternative over the null and $$ W = 1 - \beta $$ as power we get
+$$ P(H_A \mid T_S) = \frac{W \pi}{W \pi + \alpha (1 - \pi)} $$
+and with $$ W = 1 - \beta $$ the power we get
+-->
 
 $$ P(H_A \mid T_S) = \frac{W R}{W R  + \alpha} $$
 
-## Some exercises  
-
+## PPV :Some exercises  
 
 > ## Task: Play with the PPV - understand the impact of the parameters 
->
 >  
 >     Pick a recent study that you have done in fMRI or using anatomical data.  
 >     try to propose values for power, alpha, and prior
@@ -284,4 +272,42 @@ understand better what power is.
 2. Download the notebook, and try to understand the concepts and the code. If
    the code is unclear, please make an issue on the repronim [github
 site](https://github.com/ReproNim/module-stats/tree/gh-pages/notebooks)
+
+<!--
+### some notes
+
+This updated probability is $$P(H_A \mid T=t), t \in (T_S, T_N)$$,  
+
+the probability of $$H_A$$ **given** the result $$t$$ of the test.
+
+$$P(H_A \mid T)$$ is called the *posterior* probability because it is the probability after the test result.
+
+The marginalization theorem is simply that 
+
+ $$P(A) = \sum_{b_i} P(A,B = b_i) $$
+
+Here:
+
+ $$P(H) = P(H, T=T_S) + P(H, T=T_N)$$
+
+ $$ = \sum_{t = T_S, T_N} P(H, T=t) $$
+
+
+In the future, to simplify the notation, we note $$P(B=b)$$ as $$P(b)$$
+
+### Bayes theorem
+
+The famous theorem [Bayes theorem](http://en.wikipedia.org/wiki/Bayes'_theorem#Derivation):
+
+$$P(A, B) = P(A \mid B) P(B)$$
+
+and therefore
+
+$$P(A \mid B) = \frac{P(B, A)}{P(B)} = \frac{P(B \mid A) P(A)}{P(B)}$$
+
+Putting these two together we have : 
+
+$$P(A) = \sum_{b_i} P(A \mid B=b_i) P(B=b_i)$$
+
+-->
 
