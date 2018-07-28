@@ -8,8 +8,8 @@ objectives:
 - "After this lesson, you should understand what is the PPV"
 keypoints:
 - A significant (say at the 0.05 level) may have a low chance of replication. 
-- The PPV estimates the probability that the alternative hypothesis $$H_1$$ is true given that the test is significant at some $$\alpha$$ level.
-- This probability depends on several factors such as power $$\beta$$, $$\alpha$$ level, but also the **prior chance** that $$H_1$$ is true.
+- The PPV estimates the probability that the alternative hypothesis $$H_A$$ is true given that the test is significant at some $$\alpha$$ level.
+- This probability depends on several factors such as power $$\beta$$, $$\alpha$$ level, but also the **prior chance** that $$H_A$$ is true.
 ---
 
 ## Definitions: remiders
@@ -38,7 +38,7 @@ PPV = $$ P(H_A \mid T_S) $$
 
 ### Let's do some basic probability 
 
-We consider that the hypotheses are *random*, i.e. they have associated probabilities. For instance, the probability of $$H_0$$ to be true could be 20%. We have either $$H_A$$ is true, or else $$P_0$$ is true. Therefore:
+We consider that the hypotheses H_0 and H_A are *random*, i.e. they have associated probabilities. For instance, the probability of $$H_0$$ to be true could be 20%. We have either $$H_A$$ is true, or else $$P_0$$ is true. Therefore:
 
 $$P(H_A = True) + P(H_0 = True) = 1$$.
 
@@ -58,6 +58,8 @@ $$H \in (H_A, H_0)$$
 We are interested in the probability of a significant test, we can write 
 
  $$P(T_S) = P(T_S, H_A) + P(T_S, H_0)$$
+
+because $T_S$ occurs either under the null or the alternative (mutually exclusive) and their represent all the possibilities.
 
 ## Bayes theorem
 
