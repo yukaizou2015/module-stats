@@ -54,7 +54,7 @@ generate_docker() {
             --user=repronim \
             --miniconda \
                 conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk" \
-                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nipy rdflib mne mayavi nilearn datalad ipywidgets pythreejs nibabel pymvpa2 PySurfer pybids pygraphviz neurodflib pynidm reproman' \
+                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nipy rdflib mne mayavi nilearn datalad ipywidgets pythreejs nibabel pybids pygraphviz neurodflib pynidm reproman' \
                 create_env='alpaca' \
                 activate=true \
             --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
@@ -73,7 +73,7 @@ generate_singularity() {
               --user=repronim \
               --miniconda \
                   conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk" \
-                  pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nipy rdflib mne mayavi nilearn datalad ipywidgets pythreejs nibabel pymvpa2 PySurfer pybids pygraphviz neurodflib pynidm reproman' \
+                  pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nipy rdflib mne mayavi nilearn datalad ipywidgets pythreejs nibabel pybids pygraphviz neurodflib pynidm reproman' \
                   create_env='alpaca' \
                   activate=true \
               --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
