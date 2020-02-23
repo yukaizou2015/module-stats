@@ -50,11 +50,11 @@ generate_docker() {
             --base neurodebian:stretch-non-free \
             --pkg-manager apt \
             --run-bash 'apt-get update' \
-            --install git datalad graphviz\
+            --install git datalad graphviz num-utils gcc g++ curl build-essential\
             --user=repronim \
             --miniconda \
                 conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk" \
-                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype rdflib mne mayavi nilearn datalad ipywidgets pythreejs nibabel pybids pygraphviz pynidm reprozip reproman' \
+                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman' \
                 create_env='repronim' \
                 activate=true \
             --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
