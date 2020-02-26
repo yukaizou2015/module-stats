@@ -54,7 +54,7 @@ generate_docker() {
             --user=repronim \
             --miniconda \
                 conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk jupyter_contrib_nbextensions nb_conda" \
-                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman pingouin nbformat' \
+                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids reprozip reproman pingouin nbformat' \
                 create_env='repronim' \
                 activate=true \
             --run-bash "source activate neuro && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
@@ -73,7 +73,7 @@ generate_singularity() {
             --user=repronim \
             --miniconda \
                 conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk jupyter_contrib_nbextensions nb_conda" \
-                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman pingouin nbformat' \
+                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids reprozip reproman pingouin nbformat' \
                 create_env='repronim' \
                 activate=true \
             --run-bash "source activate neuro && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
