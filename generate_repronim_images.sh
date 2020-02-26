@@ -53,10 +53,11 @@ generate_docker() {
             --install git datalad graphviz num-utils gcc g++ curl build-essential\
             --user=repronim \
             --miniconda \
-                conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk" \
-                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman' \
+                conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk jupyter_contrib_nbextensions nb_conda" \
+                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman pingouin nbformat' \
                 create_env='repronim' \
                 activate=true \
+            --run-bash "source activate neuro && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
             --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
             --entrypoint="/neurodocker/startup.sh" \
             --copy . /home/repronim/module-stats \
@@ -71,13 +72,14 @@ generate_singularity() {
             --install git datalad graphviz num-utils gcc g++ curl build-essential\
             --user=repronim \
             --miniconda \
-                conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk" \
-                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman' \
+                conda_install="python=3.7 notebook ipython numpy pandas traits jupyter jupyterlab matplotlib scikit-image scikit-learn seaborn vtk jupyter_contrib_nbextensions nb_conda" \
+                pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids pynidm reprozip reproman pingouin nbformat' \
                 create_env='repronim' \
                 activate=true \
+            --run-bash "source activate neuro && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
             --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
             --entrypoint="/neurodocker/startup.sh" \
-            --copy . /home/repronim/module-stats 
+            --copy . /home/repronim/module-stats
  }
 
 # generate files
