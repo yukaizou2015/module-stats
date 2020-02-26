@@ -17,16 +17,17 @@ header-include:
 Plan
 =================================================================================
 
-- issues of reproducibility in science, historical perspective
+- Issues of reproducibility in science, historical perspective
 \pause
 	- Was Ioannidis right?
 \pause
 	- Annecdotal evidence
 \pause
-- where is the problem coming from?
+- Where is the problem coming from?
 	- computations, stats, sociology
 	- cf everything matters 
-- emphasis on statistical issues
+\pause
+- Emphasis on statistical issues
 \pause
 - Are there solutions ?
 
@@ -66,7 +67,8 @@ Anecdotal evidence 1
 > \small{During the past 20 years, numerous neuroimaging experiments have investigated aberrant brain activation during cognitive and emotional processing in patients with unipolar depression.}
 \pause
 
-\vspace{-.4cm}
+\pause
+\vspace{-.2cm}
 > \small{In total, 57 studies with 99 individual neuroimaging experiments comprising in total 1058 patients were included; 34 of them tested cognitive and 65 emotional processing. Overall analyses across cognitive processing experiments (P > .29) and across emotional processing experiments (P > .47) revealed **no significant results.** }
 
 Anecdotal evidence 2: All foods cause cancer ? Schoenfeld 2013
@@ -83,9 +85,13 @@ Computational problems
 
 - OS can be a problem (same container, different segementation)
 	- Glatard et al, 2015
+\pause
 - Version of librairies and software  
+\pause
 - Algorithms initialization  
+\pause
 - Algorithms sensitivity to noise (Kiar et al)
+\pause
 - Software variation 
 <!--   -->
 
@@ -147,6 +153,7 @@ What happens if ... p is "significant" but study power is low ?
 =================================================================================
 
 - Power : the probability of finding a significant p-value under H1
+\pause
 - Study in Button et al, 2013, more than half of the studies have less than 30% power
 \pause
 - Low Positive Predictive Value P($H_A$ true | test significant) 
@@ -267,7 +274,7 @@ A possibly quite dire situation
 <!-- strong suspicion that most studies are ...   -->
 
 
-Solutions  
+Solutions : sociological
 =================================================================================
 - Ban p-values  sounds a little extreme (BASP)
 	- Btw: Nature editorial stated :  
@@ -279,21 +286,19 @@ Solutions
 - Cobidas and reporting best practices
 	- community education and publishing efforts
 	- standards for easing reuse of data (INCF, BIDS)
-
-Solutions? 
-=================================================================================
-
-- Technical:
-	- Redefine significance
-	- Use Bayesian framework
-	- Prediction framework
-\pause
-
-- Social: work with the journals 
-	- Ban p-values 
 	- Long list of checkboxes in nature publications - Cobidas
 	- Nature statistician review
-	- Registered Reports
+
+Solutions : Technical 
+=================================================================================
+
+- Redefine significance
+\pause
+- Use Bayesian framework ?
+\pause
+- Use Prediction framework ? 
+\pause
+
 
 <!-- Notes:
 	- list of possible solutions : technical / social / techno-social
@@ -303,10 +308,15 @@ Conclusion: Is machine learning (prediction / classification) going to save us?
 ======================================================
 
 - Yes: 
-	Why ? 
+	Why ?
+\pause
 - No: 
 	Why ?
 
+Is machine learning (prediction / classification) going to save us? 
+======================================================
+
+![Varoquaux, 2019](./images/accuracy-prediction-sample-size.png){ height=320px }
 
 Conclusion: rephrase reproducibility into generalizability 
 ======================================================
@@ -318,8 +328,7 @@ Conclusion: rephrase reproducibility into generalizability
 	- populations ?
 	...
 
-- where is the biggest varation ? 
-
+- Where is the biggest variation ? 
 
 Conclusion: Ioannidis again
 ======================================================
@@ -337,7 +346,7 @@ Acknowledgements
 ======================================================
 
 * Repronim: D. Kennedy, S. Ghosh, Y. Halchenko, D. Keator, D. Jarecka, J. Grethe, M. Martone, etc...
-* McGill: Celia Greenwood, Bettina Kemme, Samir Das, Shawn Brown, Alan Evans, Bratislav Misic
+* McGill: Peer Herholz, Lex Hutton, Celia Greenwood, Bettina Kemme, Samir Das, Shawn Brown, Alan Evans, Bratislav Misic
 * Berkeley: M. D'Esposito, M. Brett, S. Van der Walt, J.Millman
 * Pasteur: G. Dumas, R. Toro, T. Bourgeron, A. Beggiato
 * Neurospin: B. Thirion, G. Varoquaux, V. Frouin, others
