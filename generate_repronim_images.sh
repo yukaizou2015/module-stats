@@ -57,7 +57,7 @@ generate_docker() {
                 pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids reprozip reproman pingouin nbformat' \
                 create_env='repronim' \
                 activate=true \
-            --run-bash "source activate neuro && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
+            --run-bash "source activate repronim && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
             --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
             --entrypoint="/neurodocker/startup.sh" \
             --copy . /home/repronim/module-stats \
@@ -76,7 +76,7 @@ generate_singularity() {
                 pip_install='ipywidgets ipyevents jupytext nilearn nistats nibabel jupytext nipype nilearn datalad ipywidgets pythreejs pybids reprozip reproman pingouin nbformat' \
                 create_env='repronim' \
                 activate=true \
-            --run-bash "source activate neuro && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
+            --run-bash "source activate repronim && jupyter nbextension enable exercise2/main && jupyter nbextension enable spellchecker/main" \
             --run 'mkdir -p ~/.jupyter && echo c.NotebookApp.ip = \"0.0.0.0\" > ~/.jupyter/jupyter_notebook_config.py' \
             --entrypoint="/neurodocker/startup.sh" \
             --copy . /home/repronim/module-stats
