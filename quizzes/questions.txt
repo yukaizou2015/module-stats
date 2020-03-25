@@ -1,0 +1,34 @@
+Qst| Lesson 1: Which statements about sampling are true? (select all that apply)
+A| A sample is a subset of a population.
+B| Resampling subsets from the same population will get you the same results.
+C| The quality of the sample is related to the generalizability of the results with regard to a larger population.
+Answer| A, C
+Type| multi
+
+#####
+
+qst| Lesson 1: Which statements about statistics are true? (select all that apply)
+A| Statistics are not any function of the data.
+B| Statistics are a random variable.
+C| For a given value x, the CDF will give us the probability that the random variable will be less (or equal) than x.
+D| There are only two risks of errors.
+Answer| B, C
+type| multi
+
+######
+
+qst| Lesson 2: What are types of effect sizes? (select all that apply)
+A| Rank-biserial difference
+B| normalized & estimated
+C| approximated
+D| Cohen's risk correlation
+Answer| b
+type| multi
+
+####
+
+qst| Lesson 2: Which effect size provides an approximation of the difficulty of detecting a given effect? (select one option)
+A| normalized
+B| non-normalized
+C| both
+Answer| A
