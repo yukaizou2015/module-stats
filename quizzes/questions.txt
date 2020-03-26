@@ -25,10 +25,68 @@ D| Cohen's risk correlation
 Answer| b
 type| multi
 
-####
+######
 
 qst| Lesson 2: Which effect size provides an approximation of the difficulty of detecting a given effect? (select one option)
 A| normalized
 B| non-normalized
 C| both
 Answer| A
+type| single
+
+######
+
+qst| Lesson 3: Complete the following statement: A p-value ... (select all that apply)
+A| does measure the effect size and the importance of the result.
+B| can indicate how incompatible the data are with a specified statistical model.
+C| does measure the probability that the studied hypothesis is true.
+D| and related analyses should not be reported selectively.
+Answer| B,D
+type| multi
+
+######
+
+qst| Lesson 3: Why do you need to correct for multiple comparisons? (select one option)
+A| The more inferences are made, the more likely erroneous inferences are to occur.
+B| The standard deviation of the tested samples increases through multiple tests.
+C| The confidence interval becomes unreliable through multiple inferences.
+Answer| A
+type| single
+
+######
+
+qst| Lesson 4: What do you need to know to compute the power?  (select one option)
+A| the risk of the false negative
+B| the distribution of the data
+C| H0 and H1
+Answer| A
+type| single
+
+######
+
+qst| Lesson 4: Are significant effects from an underpowered study overestimated? (select one option)
+A| No
+B| Yes
+C| Depends on the hypothesis.
+Answer| B
+type| single
+
+######
+
+qst| Lesson 5: Which values are needed to define the PPV? (select all that apply)
+A| t
+B| HA
+C| alpha
+Answer| A
+type| single
+
+######
+
+qst| Lesson 5: What factor is important for the probability besides power and alpha level? (select one option)
+A| the prior chance that HA is false
+B| the prior chance that HA is either false or true
+C| the prior chance that HA is true
+Answer| C
+type| single
+
+######
