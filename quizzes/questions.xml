@@ -1,0 +1,303 @@
+<?xml version="1.0" ?>
+<quiz>
+  <qstiii>This child contains text.</qstiii>
+  <qst>another child contains text.</qst>
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 1: Which statements about sampling are true? (select all that apply)</text>
+    </questiontext>
+    <name>
+      <text>Question 1</text>
+    </name>
+    <single>false</single>
+    <answer fraction="50">
+      <text>A sample is a subset of a population.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Resampling subsets from the same population will get you the same results.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="50">
+      <text>The quality of the sample is related to the generalizability of the results with regard to a larger population.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 1: Which statements about statistics are true? (select all that apply)</text>
+    </questiontext>
+    <name>
+      <text>Question 2</text>
+    </name>
+    <single>false</single>
+    <answer fraction="0">
+      <text>Statistics are not any function of the data.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="50">
+      <text>Statistics are a random variable.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="50">
+      <text>For a given value x, the CDF will give us the probability that the random variable will be less (or equal) than x.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>There are only two risks of errors.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 2: What are types of effect sizes? (select all that apply)</text>
+    </questiontext>
+    <name>
+      <text>Question 3</text>
+    </name>
+    <single>false</single>
+    <answer fraction="0">
+      <text>Rank-biserial difference</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>normalized &amp; estimated</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>approximated</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Cohen's risk correlation</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 2: Which effect size provides an approximation of the difficulty of detecting a given effect? (select one option)</text>
+    </questiontext>
+    <name>
+      <text>Question 4</text>
+    </name>
+    <single>true</single>
+    <answer fraction="100">
+      <text>normalized</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>non-normalized</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>both</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 3: Complete the following statement: A p-value ... (select all that apply)</text>
+    </questiontext>
+    <name>
+      <text>Question 5</text>
+    </name>
+    <single>false</single>
+    <answer fraction="0">
+      <text>does measure the effect size and the importance of the result.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="50">
+      <text>can indicate how incompatible the data are with a specified statistical model.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>does measure the probability that the studied hypothesis is true.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="50">
+      <text>and related analyses should not be reported selectively.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 3: Why do you need to correct for multiple comparisons? (select one option)</text>
+    </questiontext>
+    <name>
+      <text>Question 6</text>
+    </name>
+    <single>true</single>
+    <answer fraction="100">
+      <text>The more inferences are made, the more likely erroneous inferences are to occur.</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>The standard deviation of the tested samples increases through multiple tests.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>The confidence interval becomes unreliable through multiple inferences.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 4: What do you need to know to compute the power?  (select one option)</text>
+    </questiontext>
+    <name>
+      <text>Question 7</text>
+    </name>
+    <single>true</single>
+    <answer fraction="100">
+      <text>the risk of the false negative</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>the distribution of the data</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>H0 and H1</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 4: Are significant effects from an underpowered study overestimated? (select one option)</text>
+    </questiontext>
+    <name>
+      <text>Question 8</text>
+    </name>
+    <single>true</single>
+    <answer fraction="0">
+      <text>No</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Yes</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Depends on the hypothesis.</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 5: Which values are needed to define the PPV? (select all that apply)</text>
+    </questiontext>
+    <name>
+      <text>Question 9</text>
+    </name>
+    <single>true</single>
+    <answer fraction="100">
+      <text>t</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>HA</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>alpha</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <questiontext format="html">
+      <text>Lesson 5: What factor is important for the probability besides power and alpha level? (select one option)</text>
+    </questiontext>
+    <name>
+      <text>Question 10</text>
+    </name>
+    <single>true</single>
+    <answer fraction="0">
+      <text>the prior chance that HA is false</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>the prior chance that HA is either false or true</text>
+      <feedback>
+        <text>Wrong answer</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>the prior chance that HA is true</text>
+      <feedback>
+        <text>Correct answer!</text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>
