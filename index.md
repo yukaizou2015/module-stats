@@ -11,3 +11,5 @@ The [template](https://github.com/repronim/module-template) for all
 ReproNim modules is based on the templates of [Neurohackweek]({{site.nhw_site
 }}), [Data Carpentry]({{ site.dc_site }}) and [Software Carpentry]({{
 site.swc_site }}) workshops.
+It is based on the lesson template used in [Neurohackweek]({{ site.nhw_site }}), [Data Carpentry]({{ site.dc_site }})
+and [Software Carpentry]({{ site.swc_site }}) workshops.
