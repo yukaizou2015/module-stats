@@ -38,7 +38,7 @@ PPV = $$ P(H_A \mid T_S) $$
 
 ### Let's do some basic probability
 
-We consider that the hypotheses H_0 and H_A are *random*, i.e. they have associated probabilities. For instance, the probability of $$H_0$$ to be true could be 20%. We have either $$H_A$$ is true, or else $$P_0$$ is true. Therefore:
+We consider that the hypotheses H_0 and H_A are *random*, i.e. they have associated probabilities. For instance, the probability of $$H_0$$ to be true could be 20%. We have either $$H_A$$ is true, or else $$H_0$$ is true. Therefore:
 
 $$P(H_A = True) + P(H_0 = True) = 1$$.
 
