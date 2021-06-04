@@ -55,7 +55,7 @@ This [article](http://staff.bath.ac.uk/pssiw/stats2/page2/page14/page14.html) is
 
 There are many good introductions to the GLM. Here, we propose that you use the pages from this course. The course takes you through the very basics of the GLM and shows you some implementation with python.  
 
-Assignment: Read [this web page](https://matthew-brett.github.io/teaching/glm_intro.html). Use a terminal and python to go through the code and understand what is being done. If you do not know about python, you can go through the same page with R or Matlab, it will not take long to translate it. However, we recommend that you learn enough python to be able to follow. If you need a python introduction, please follow the [beginners course](https://www.python.org/about/gettingstarted/) of Python.
+Assignment: Read [this web page](https://matthew-brett.github.io/teaching/glm_intro.html). Use a terminal and python to go through the code and understand what is being done. If you do not know about python, you can go through the same page with R or Matlab, it will not take long to translate it. However, we recommend that you learn enough python to be able to follow. If you need a python introduction, please follow the [beginners course](https://www.python.org/about/gettingstarted/) of Python. Here is also a [SciPy Tutorial](https://jobtensor.com/Tutorial/Python/en/SciPy) that can help you with statistical calculations.
 
 Now that you have a first  understanding of the GLM, make sure you follow easily [this page](https://bic-berkeley.github.io/psych-214-fall-2016/mean_test_example.html) that walk you through an other example.
 
