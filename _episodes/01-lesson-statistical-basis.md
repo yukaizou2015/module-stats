@@ -6,6 +6,7 @@ questions:
 - "Sampling, notion of estimation : estimates of mean and variances"
 - "Distributions, relation to frequency, PDF, CDF, SF, ISF "
 - "Hypothesis testing: the basics H0 versus H1"
+- "The Multiple Comparisons Problem"
 - "Confidence intervals "
 - "Notion of model comparison : BIC/Akaike"
 - "Notion of bayesian statistics "
@@ -64,7 +65,9 @@ There is also this [link](http://mathworld.wolfram.com/StatisticalDistribution.h
 
 
 Next, we need to be able to use the [Cumulative distribution function (CDF)](https://en.wikipedia.org/wiki/Cumulative_distribution_function). For a given value $$x$$, the CDF will give us the probability that the random variable will be less (or equal) than $$x$$.
-The CDF is related to its Complementary cumulative distribution function (also called tail distribution, or survival function :  $$ SF(x) =  1 - CDF(x) $$.
+The CDF is related to its Complementary cumulative distribution function (also called tail distribution, or survival function:  
+
+$$SF(x) =  1 - CDF(x)$$
 
 See the [survival function](https://en.wikipedia.org/wiki/Survival_function) in wikipedia.
 
@@ -100,19 +103,40 @@ is less than 5%. See our [lesson on p-values and caveats](http://www.repronim.or
 
 ### Risk of errors
 
-There are at least two risks of errors (as introduced by J. Neyman and G. Pearson): 1) Deciding that the two groups are drawn from different populations when in fact that is not the case, (type I error) and 2) deciding that the two groups are drawn from one homogeneous population while this is not the case (type II error). There are also errors of higher types see [the wikipedia article](https://en.wikipedia.org/wiki/Type_III_error) on this.
+There are at least two risks of errors (as introduced by J. Neyman and G. Pearson): 1) Deciding that the two groups are drawn from different populations when in fact that is not the case, (type I error) and 2) deciding that the two groups are drawn from one homogeneous population while this is not the case (type II error). 
+
+> ## External reading
+>
+> There are also errors of higher types see [the wikipedia article](https://en.wikipedia.org/wiki/Type_III_error) on this.
+>
+{: .callout}
 
 
-### Introduction to the multiple comparison problem
+### The multiple comparison problem
 
-The issue occurs when many hypotheses are made. If we control for the risk of error of type I for each test, after many tests, some will be "significant" just by chance.
+The multiple comparison problems occurs when many hypotheses are made. If we control for the risk of Type I error for each test, after many tests, some will be "significant" just by chance.
 
+Typically, a functional scan will separate the brain into about 150,000 voxels. Generalised linear model is run one time for each voxel, meaning that about 150,000 hypotheses are tested, one for each voxel.
+
+Supposes that one selects a decision threshold (e.g., *p* < 0.05) to reject the null hypothesis. If only conducting one test, it's quite straightforward to find the threshold by looking up a statistical table (e.g. *Z* = 1.65). However, if 150,000 tests are performed, then we would expect $$150,000 \times 0.05 = 7,500$$ false positives if none of the voxel is affected by the task.
 
 ## Bayesian statistics
 
-Finding the right level of introduction for this topic is not easy. We propose to start with [this blog](https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/) which should give you a good introduction.
+Finding the right level of introduction for this topic is not easy. We propose to start with these external materials:
 
-There is also [this one](http://faculty.washington.edu/kenrice/BayesIntroClassEpi515.pdf). Exercises on this still need to be developed [TBD].
+> ## External materials:
+>
+> * [Analytics Vidhya: Power of Bayesian Statistics & Probability](https://www.analyticsvidhya.com/blog/2016/06/bayesian-statistics-beginners-simple-english/) (Updated 2023)
+>
+> * [Bayesian Statistics by Prof Ken Rice](https://faculty.washington.edu/kenrice/teaching.html)
+>
+{: .callout}
+
+> ## Exercise
+>
+> Exercises on this still need to be developed [TBD].
+>
+{: .challenge}
 
 
 Bayesian statistics are *rarely* used, because researchers are often unsure on how to use them, and because they sometimes can be used to include subjective knowledge. However, they have a better theoretical ground and in many cases they should be used.
@@ -125,12 +149,22 @@ The inertia of the community to adopt the bayesian framework is clear.  One reas
 * What are the key advantage of Bayesian statistics ?
 * What do Bayesian statistics require before you can apply them - do we have this
 
+> ## Additional reading
+>
+> * [Practical Bayesian Inference in Neuroscience: Or How I Learned To Stop Worrying and Embrace the Distribution](https://doi.org/10.1523/ENEURO.0484-23.2024)
+>
+{: .callout}
+
 ## Notion of model comparison : BIC/Akaike
 
 Model comparison is **fundamental**. Here are a few links on this topic:
 
-* [Wikipedia AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion)
-
-* [Wikipedia BIC](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
-
-* And a comparison of these two [here](https://methodology.psu.edu/AIC-vs-BIC)
+> ## External materials:
+>
+> * [Wikipedia AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion)
+>
+> * [Wikipedia BIC](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
+>
+> * And a comparison of these two [here](https://methodology.psu.edu/AIC-vs-BIC)
+>
+{: .callout}
