@@ -1,5 +1,5 @@
 ---
-title: ReproNim workshop: The use of p-values in brain imaging and statistical aspects in reproducibility 
+title: ReproNim workshop - The use of p-values in brain imaging and statistical aspects in reproducibility 
 shortitle: Evil p-values 
 subtitle: A reproducibility perspective 
 date:  Aug 2nd 2018
@@ -7,11 +7,11 @@ author: JB Poline \newline
 institute: McGill University, UC Berkeley
 
 header-include:
-	- \usefonttheme{professionalfonts}
-	- \usepackage{fontspec}
-	- \setsansfont[BoldFont = {Fira Sans Medium}]{Fira Sans}
-	- \setmonofont{Fira Mono}
-        - \usepackage{amsmath}
+- \usefonttheme{professionalfonts}
+- \usepackage{fontspec}
+- \setsansfont[BoldFont = {Fira Sans Medium}]{Fira Sans}
+- \setmonofont{Fira Mono}
+- \usepackage{amsmath}
 ---
 
 Plan

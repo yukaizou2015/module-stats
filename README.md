@@ -7,7 +7,8 @@ How to use this template:
 choose either "ReproNim" (if that's an option) or your own user account and
 then enter the name of the lesson/repository that you wish to create.
 
-2. Change the following variables in the `_config.yml` file:
+2. Change the following variables in the `_confi
+.yml` file:
    - `title`
    - `repo`
    - `root`
@@ -23,6 +24,21 @@ then enter the name of the lesson/repository that you wish to create.
   - Edit the headers of each of your sections. Editing the duration of both `teaching` and `exercises`
   - Add coffee breaks into the lesson. This keeps the timing of each section
     accurate.
+
+# Running with Docker locally for development
+
+Instead of installing ruby and jekyll, you can use docker to run a live version of your repo locally.
+As you make changes, it will recompile the changes and all you will need to do is refresh the browser.
+
+The following command it assumes that you are inside your cloned github repo. Adapted from [this blog](https://dev.to/michael/compile-a-jekyll-project-without-installing-jekyll-or-ruby-by-using-docker-4184):
+
+```
+docker run --rm -it --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" \
+ --env JEKYLL_ENV=development --platform linux/amd64 -p 4000:4000 jekyll/jekyll:4.0.1 \
+ jekyll serve --config _config.yml,_config_dev.yml
+```
+
+You should then be able to open the live page at http://localhost:4000/
 
 # Acknowledgment
 
